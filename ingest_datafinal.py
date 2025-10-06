@@ -1,7 +1,6 @@
 import os
 import json
 import pickle
-from dotenv import load_dotenv
 from datetime import datetime
 
 # --- Loader Imports ---
@@ -19,8 +18,7 @@ from langchain_community.vectorstores import Chroma
 
 print("--- Starting Final Advanced Ingestion Script ---")
 
-load_dotenv()
-GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
 if not GOOGLE_API_KEY:
     raise ValueError("Google API key not found. Please set it in the .env file.")
 else:

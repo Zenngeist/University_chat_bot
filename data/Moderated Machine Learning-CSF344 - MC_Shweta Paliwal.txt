@@ -1,0 +1,78 @@
+﻿Paper Code: CSF344  Page 1 of 1
+  
+
+ 
+
+DIT UNIVERSITY DEHRADUN 
+         MCA MIDTERM EXAMINATION, ODD SEM 2022-23 (SEM III) 
+
+ 
+
+Roll No.             
+
+Subject Name: Machine Learning 
+Time: 2 Hours Total Marks: 50 
+
+Note: All questions are compulsory.  No student is allowed to leave the examination hall before the completion of the exam. 
+______________________________________________________________________________________________________ 
+
+Q.1)  Attempt all Parts: 
+ (a) Explain Min- Max Normalization technique. 
+ (b) Explain the K Means Clustering. 
+ (c)  Explain the applications of Machine learning. 
+ (d) For a moderately skewed distribution, the mean and median are respectively 26.8 and 27.9. What is the mode of the 
+
+distribution? 
+  [4 x 2.5= 10] 
+Q.2)   Attempt all Parts: 
+ (a) What is the mathematical formula representation for the following: 
+
+(a) Statistical representation of Machine Learning. 
+(b) Mean Squared Error 
+(c) Sigmoid cost function 
+(d) Linear Regression 
+(e) Logistic Regression 
+
+ (b) One card is drawn from a deck of 52 cards, well-shuffled. Calculate the probability that the card; 
+
+(a) Will be an ace. 
+
+(b) Will not be an ace. 
+
+ (c)  Explain well posed learning problems in machine learning. 
+
+ (d) Compare between Classification and Regression. 
+
+  [4 x 2.5= 10] 
+Q.3)     Attempt any Two Parts : 
+
+ (a) Which regression analysis is applied to design “Weather Forecasting Model”? Elaborate the identified type in detail. 
+ (b) Explain the process of Data Cleaning in Machine Learning. 
+ (c) What is the mean, median and mode for the following dataset;23, 18, 24, 23, 31, 37, 28, 30, 25, 40, 35, 35, 27, 25 
+  [2 x 5= 10] 
+
+Q.4)     Attempt any Two Parts : 
+ (a) Apply Linear Regression to solve the following; 
+
+ 
+ (b) Explain different types of learning in machine learning 
+ (c) Explain the steps required for designing a learning system. 
+  [2 x 5= 10] 
+
+Q.5)     Attempt any Two Parts : 
+ (a) Apply Bayes Theorem to solve the following: 
+
+Three urns are there containing white and black balls; first urn has 3 white and 2 black balls; second urn has 2 white 
+and 3 black balls and third urn has 4 white and 1 black balls. Without any biasing one urn is chosen from that one 
+ball is chosen randomly which was white. What is probability that it came from the third urn? 
+
+ (b) Explain the following terms: 
+(a) Regularization 
+(b)Logistic Regression 
+(c) Lasso Regression 
+(d) Ridge Regression 
+
+ (c) Apply Z Score Normalization Technique to solve the following; 1200,1400,1600,1800 and 2000 
+  [2 x 5= 10] 
+
+-----END OF PAPER ----

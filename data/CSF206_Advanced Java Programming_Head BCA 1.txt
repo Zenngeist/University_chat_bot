@@ -1,0 +1,119 @@
+﻿Paper Code: CSF206  Printed Page 1 of 2 
+  
+
+  
+
+DIT UNIVERSITY DEHRADUN 
+         B.TECH (CSE) MID TERM EXAMINATION, EVEN  SEM 2023-24 (SEM IV) 
+
+ 
+
+Roll No.             
+
+Subject Name: Advanced Java Programming 
+Time: 2 Hours Total Marks: 50 
+
+Note: All questions are compulsory.  No student is allowed to leave the examination hall before the completion of the exam. 
+______________________________________________________________________________________________________ 
+
+Q.1)  Attempt all Parts : 
+ (a) Define polymorphism. Explain the two types of polymorphism in Java with examples. 
+ (b) Write a code in java  to display a simple Hello message in Applet. 
+ (c)  Describe the lifecycle of a thread in Java, including all possible states. 
+ (d) Explain how the Java Collections Framework supports generics and how it contributes to type safety 
+
+in collections? 
+  [4 x 2.5= 10] 
+ 
+Q.2)   Attempt all Parts : 
+ (a) Explain with justification, what is the output of the following program?  
+
+import java.util.*; 
+public class Treeset { 
+    public static void main(String[] args) 
+    { 
+        TreeSet<String> treeSet = new TreeSet<>(); 
+         treeSet.add("DIT "); 
+        treeSet.add("SOC"); 
+        treeSet.add("CSE"); 
+        treeSet.add("IT"); 
+         for (String temp : treeSet) 
+            System.out.printf(temp + " "); 
+         System.out.println("\n"); 
+    } 
+} 
+
+ (b) What is an applet in Java and how is it typically used in web development? 
+ (c)  What are the basic interfaces of Java Collections Framework? 
+ (d) Explain with justification, what is the output of the following program? 
+
+Import java.util.*; 
+ public class hashSet { 
+    public static void main(String[] args) 
+    { 
+        HashSet<String> hashSet = new HashSet<>(); 
+        hashSet.add("SOC"); 
+        hashSet.add("CSE"); 
+        hashSet.add("CSE"); 
+        hashSet.add("SOC"); 
+         System.out.println(hashSet); 
+    } 
+} 
+
+  [4 x 2.5= 10] 
+ 
+
+  
+  
+
+ 
+ 
+
+
+
+Paper Code: CSF206  Printed Page 2 of 2 
+  
+
+Q.3)     Attempt any Two Parts : 
+ (a) Explain the difference between AWT and Swing in Java.  
+ (b) Design a Java Swing application that uses a BorderLayout. Place a JButton in the SOUTH region, a 
+
+JTextField in the NORTH, and a JTextArea in the CENTER. When the button is pressed, append the 
+text from the JTextField into the JTextArea. 
+
+ (c) Write a Java program to create an ArrayList of integers. Add five integers to it and then perform the 
+following operations: 
+a. Iterate over the list and print each element. 
+b. Sort the list in descending order 
+
+  [2 x 5= 10] 
+ 
+Q.4)     Attempt any Two Parts : 
+
+ (a) Develop a Swing application using JFrame that contains a JLabel centered in the window. The JLabel 
+should display the text "Hello, Swing!" Ensure the application exits properly when the window is 
+closed. 
+
+ (b) Implement a Stack using LinkedList in Java, including methods for push, pop, and peek operations. 
+ (c) Write a simple java program that demonstrates the creation of a thread in Java using both the 
+
+Thread class and the Runnable interface. 
+  [2 x 5= 10] 
+
+ 
+Q.5)     Attempt any Two Parts : 
+
+ (a) Write a Swing application called SwingAdder as shown. The "ADD" button adds the two integers 
+and display the result. The "CLEAR" button shall clear all the text fields. 
+
+ 
+ (b) What are adapter classes in Java? Write the importance of these classes for developers when working 
+
+with event-driven interfaces. Provide details on five adapter classes offered by Java, along with the 
+corresponding interfaces. 
+
+ (c) Provide a basic example of a Java applet and explain how its life cycle methods are implemented in 
+the code? 
+
+  [2 x 5= 10] 
+-----END OF PAPER ----

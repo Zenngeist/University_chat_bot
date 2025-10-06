@@ -1,0 +1,138 @@
+{
+  "programDetails": {
+    "courseName": "B.Tech in Computer Science & Engineering",
+    "courseType": "B.Tech",
+    "durationYears": 4
+  },
+  "eligibility": {
+    "class10": "Passed 10th Class Examination with 60% marks in aggregate from a recognized board.",
+    "class12": [
+      "Passed 10+2 Examination with 60% marks in aggregate in Physics, Math, English and any one of the following subjects: Chemistry/ Computer Science/Electronics/Information Technology/ Biology/Informatics Practices/Biotechnology/ Technical Vocational Subject/Engineering Graphics/Business Studies/Entrepreneurship.",
+      "Secured pass marks in Physics and Math in 10+2."
+    ]
+  },
+  "admissionProcedure": [
+    "Merit based counseling on rank of Joint Entrance Examination (JEE).",
+    "Direct Admission for XII Std Board Toppers (10% Seats).",
+    "Merit based counseling on XII Std aggregate marks.",
+    "NRI/Sponsored Seats (10% Seats)."
+  ],
+  "feeStructure": {
+    "year": "2025-26",
+    "allIndiaCategory": {
+      "installments": [
+        {
+          "name": "1st Installment",
+          "tuitionFee": 116050,
+          "academicServicesFee": 69650,
+          "totalFee": 185700
+        },
+        {
+          "name": "2nd Installment",
+          "tuitionFee": 116050,
+          "academicServicesFee": 69650,
+          "totalFee": 185700
+        }
+      ]
+    },
+    "uttarakhandHimalayanStateQuota": {
+      "note": "After 25% Scholarship on Tuition Fee",
+      "installments": [
+        {
+          "name": "1st Installment",
+          "tuitionFee": 87038,
+          "academicServicesFee": 69650,
+          "totalFee": 156688
+        },
+        {
+          "name": "2nd Installment",
+          "tuitionFee": 87038,
+          "academicServicesFee": 69650,
+          "totalFee": 156688
+        }
+      ]
+    }
+  },
+  "scholarships": {
+    "meritScholarshipFirstYear": {
+      "basis": "Percentage of marks in Physics, Mathematics and one other selected subject in XII Std. or JEE Score.",
+      "tiers": [
+        {
+          "criteria": "≥95% in XII Std. / 1st Rank Holders of all Boards / JEE Rank Between 1-50,000",
+          "scholarshipPercentage": 100,
+          "note": "Additional Rs.20,000/- per semester scholarship on JEE Rank between 1-50,000"
+        },
+        {
+          "criteria": "≥90% to < 95% in XII Std. / JEE Rank Between 50,001-80,000",
+          "scholarshipPercentage": 50
+        },
+        {
+          "criteria": "≥ 80% to < 90% in XII Std. / JEE Rank Between 80,001-1,00,000",
+          "scholarshipPercentage": 25
+        }
+      ],
+      "continuationNote": "The Merit Scholarship is applicable for 1st year only."
+    },
+    "additionalScholarships": [
+      {
+        "category": "Girls Students",
+        "description": "Student has scored 80% & above in X & XII Std. aggregate for UG programs.",
+        "scholarshipPercentage": 10,
+        "continuationCriteria": "To continue, student should maintain a CGPA 8.5 and above every year, without any back paper, UFM and Indiscipline case."
+      },
+      {
+        "category": "Sibling",
+        "description": "Siblings of current Students / Alumnus.",
+        "scholarshipPercentage": 5,
+        "continuationCriteria": "Applicable only for the first year."
+      },
+      {
+        "category": "Defence",
+        "description": "Defence Personnel (Serving / retired) or Ward of Martyrs/Gallantry Medals Awardees.",
+        "scholarshipPercentage": 5,
+        "continuationCriteria": "Applicable only for the first year."
+      },
+      {
+        "category": "Ward of Single Mother",
+        "description": "Scholarship for Ward of Single Mother.",
+        "scholarshipPercentage": 5,
+        "continuationCriteria": "To continue, student should maintain a CGPA 7.0 and above every year, without any back paper, UFM and Indiscipline case."
+      },
+      {
+        "category": "Orphan Student",
+        "description": "Scholarship for the Orphan Student (Both Parents are not Alive).",
+        "scholarshipPercentage": 5,
+        "continuationCriteria": "To continue, student should maintain a CGPA 7.0 and above every year, without any back paper, UFM and Indiscipline case."
+      },
+      {
+        "category": "Differently Abled",
+        "description": "Scholarship for Differently Abled Student.",
+        "scholarshipPercentage": 5,
+        "continuationCriteria": "To continue, student should maintain a CGPA 7.0 and above every year, without any back paper, UFM and Indiscipline case."
+      },
+      {
+        "category": "Sports",
+        "description": "Scholarship on the basis of performance in Sports.",
+        "scholarshipPercentage": "Please refer the policy document",
+        "continuationCriteria": "Applicable only for the first year."
+      }
+    ]
+  },
+  "notes": [
+    "Online Registration is Mandatory.",
+    "In addition to the program fee, an Admission Fee of Rs. 10,000 (Non-Refundable) and a Caution Money of Rs. 5,000 (Refundable) will be charged at the time of admission.",
+    "An Industrial Tour Fee of Rs. 25,000 will be charged for one semester during the entire course duration.",
+    "All scholarships are applicable only on the Program Tuition Fee.",
+    "Only one type of scholarship can be availed; students can opt for the one with the higher percentage.",
+    "The total scholarship amount cannot be more than 100% of the Tuition fee."
+  ]
+}
+
+The Semester 1 Fee Breakdown is: Tuition Fees of 102350 and Academic Fees of 61400. Due Date Start: 01/06/2023, Due Date End: 30/06/2023.
+The Semester 2 Fee Breakdown is: Tuition Fees of 102350 and Academic Fees of 61400. Due Date Start: 01/11/2023, Due Date End: 30/11/2023.
+The Semester 3 Fee Breakdown is: Tuition Fees of 105450 and Academic Fees of 56800. Due Date Start: 15/06/2024, Due Date End: 15/07/2024.
+The Semester 4 Fee Breakdown is: Tuition Fees of 105450 and Academic Fees of 56800. Due Date Start: 15/11/2024, Due Date End: 15/12/2024.
+The Semester 5 Fee Breakdown is: Tuition Fees of 108600 and Academic Fees of 59500. Due Date Start: 15/06/2025, Due Date End: 15/07/2025.
+The Semester 6 Fee Breakdown is: Tuition Fees of 108600 and Academic Fees of 59500. Due Date Start: 15/11/2025, Due Date End: 15/12/2025.
+The Semester 7 Fee Breakdown is: Tuition Fees of 111850 and Academic Fees of 60250. Due Date Start: 15/06/2026, Due Date End: 15/07/2026.
+The Semester 8 Fee Breakdown is: Tuition Fees of 111850 and Academic Fees of 60250. Due Date Start: 15/11/2026, Due Date End: 15/12/2026.

@@ -1,0 +1,56 @@
+General Timetable for B.Tech in Computer Science and Engineering (Specialisation: Artificial Intelligence, Machine Learning and Robotics) - ODD Semester 2025-26
+Monday:
+
+On Monday The Practical-1 for R Programming (CSN341) is scheduled from 10:00 AM to 11:50 AM in Block VEDANTA, VEDTF 305 LH 3. The instructor is Gaurav Dhiman.
+
+On Monday The Lecture-1 for Product Design and Development (MEN446) is from 12:00 PM to 12:50 PM in Block CHANAKYA, CHAASF LH205 Lecture Hall 5. The instructor is Rajan Raman.
+
+On Monday The Lecture-1 for Machine Learning (CSN344) is from 2:00 PM to 2:50 PM in Block VISVESVARAYA, VERASF 201 Lecture Hall. The instructor is Anushikha Singh.
+
+On Monday The Practical-1 for Artificial Intelligence (CSN304) is from 4:00 PM to 5:50 PM in Block VEDANTA, VED5F 508 ComputerLab 4. The instructor is Vishakha Arya.
+
+Tuesday:
+
+On Tuesday The Lecture-1 for Computer Networks (CSN303) is from 10:00 AM to 10:50 AM in Block VISVESVARAYA, VERA4F 406 Lecture Hall 6. The instructor is Shahid Ul Haq.
+
+On Tuesday The Lecture-1 for Artificial Intelligence (CSN304) is from 11:00 AM to 11:50 AM in Block VEDANTA, VEDTF 329 LH 6. The instructor is Vishakha Arya.
+
+On Tuesday The Lecture-2 for Product Design and Development (MEN446) is from 12:00 PM to 12:50 PM in Block CHANAKYA, CHAASF LH205 Lecture Hall 5. The instructor is Rajan Raman.
+
+On Tuesday The Lecture-2 for Machine Learning (CSN344) is from 2:00 PM to 2:50 PM in Block VISVESVARAYA, VERASF 201 Lecture Hall. The instructor is Anushikha Singh.
+
+On Tuesday The Lecture-1 for R Programming (CSN341) is from 3:00 PM to 3:50 PM in Block VISVESVARAYA, VERASF 201 Lecture Hall. The instructor is Gaurav Dhiman.
+
+On Tuesday The Practical-1 for Advanced Java Programming (CSN302) is from 4:00 PM to 5:50 PM in Block VEDANTA, VEDTF 329 LH 6. The instructor is Piyush Anand.
+
+Wednesday:
+
+On Wednesday  Practical-1 for Machine Learning (CSN344) is scheduled from 10:00 AM to 11:50 AM in Block VEDANTA, VEDTF 305 LH 3. The instructor is Anushikha Singh.
+
+On Wednesday The Lecture-3 for Product Design and Development (MEN446) is from 12:00 PM to 12:50 PM in Block CHANAKYA, CHAASF LH205 Lecture Hall 5. The instructor is Rajan Raman.
+
+On Wednesday The Lecture-2 for Computer Networks (CSN303) is from 2:00 PM to 2:50 PM in Block VISVESVARAYA, VERA4F 402 Lecture Hall 2. The instructor is Shahid Ul Haq.
+
+On Wednesday The Lecture-1 for Advanced Java Programming (CSN302) is from 3:00 PM to 3:50 PM in Block VISVESVARAYA, VERASF 201 Lecture Hall. The instructor is Piyush Anand.
+
+Thursday:
+
+On Thursday Lecture-2 for Artificial Intelligence (CSN304) is from 11:00 AM to 11:50 AM in Block VEDANTA, VED4F 405 LH7. The instructor is Vishakha Arya.
+
+On Thursday The Lecture-1 for Aptitude and Soft Skills (CDC201) is from 2:00 PM to 2:50 PM in Block VISVAKARMA, VISKSF WL206 Seminar Hall 12. The instructor is Shaifali Streeting.
+
+On Thursday The Lecture-2 for Advanced Java Programming (CSN302) is from 3:00 PM to 3:50 PM in Block VISVESVARAYA, VERASF 201 Lecture Hall. The instructor is Piyush Anand.
+
+On Thursday The Practical-1 for Computer Networks (CSN303) is from 4:00 PM to 5:50 PM in Block VEDANTA, VED5F 508 ComputerLab 4. The instructor is Shahid Ul Haq.
+
+Friday:
+
+On Friday The Lecture-2 for Aptitude and Soft Skills (CDC201) is from 9:00 AM to 9:50 AM in Block VEDANTA, VEDSF 227 LH 05 Room. The instructor is Vivek Dheeman.
+
+On Friday The Lecture-3 for Artificial Intelligence (CSN304) is from 10:00 AM to 10:50 AM in Block VEDANTA, VED4F 402 LH 1 Room. The instructor is Vishakha Arya.
+
+On Friday The Lecture-3 for Computer Networks (CSN303) is from 11:00 AM to 11:50 AM in Block VISVESVARAYA, VERA4F 406 Lecture Hall 6. The instructor is Shahid Ul Haq.
+
+On Friday The Lecture-2 for R Programming (CSN341) is from 12:00 PM to 12:50 PM in Block VISVESVARAYA, VERASF 201 Lecture Hall. The instructor is Gaurav Dhiman.
+
+On Friday The Lecture-3 for Advanced Java Programming (CSN302) is from 2:00 PM to 2:50 PM in Block VISVESVARAYA, VERASF 201 Lecture Hall. The instructor is Piyush Anand.

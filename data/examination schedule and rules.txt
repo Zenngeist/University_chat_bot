@@ -1,0 +1,20 @@
+The students examinations begin in just over a week. The first exam is Machine Learning (CSN344) on Tuesday, October 14, 2025, from 02:30 PM to 04:00 PM in VEDANTA, Second, VEDSF 203 LH 2 Room.
+
+The following day, October 15, the exam for Advanced Java Programming (CSN302) is scheduled from 09:30 AM to 11:00 AM in VISVAKARMA, Second, VISKSF WL 207 Lecture Hall 13.
+
+On Thursday, October 16, 2025, the Computer Networks (CSN303) exam will be held from 02:30 PM to 04:00 PM in VISVAKARMA, Third, VISKTF WL302 Lecture Hall.
+
+Two exams are scheduled for Friday, October 17, 2025: R Programming (CSN341) from 09:30 AM to 11:00 AM in VEDANTA, Fourth, VED4F 427 LH5, followed by Artificial Intelligence (CSN304) from 02:30 PM to 04:00 PM in VISVAKARMA, Third, VISKTF WL302 Lecture Hall.
+
+The final scheduled exam is Product Design and Development (MEN446) on Saturday, October 18, 2025, from 09:30 AM to 11:00 AM in VEDANTA, Second, VEDSF 202 LH 1. Room.
+
+The schedule includes several important instructions for the examinations.
+Students must enter the examination hall 15 minutes prior to the scheduled time, as those who come late will not be permitted to enter.
+It is required that students write their Roll number on the question paper and occupy only the seats assigned to them as per the official seating plan.
+Admittance to the exam hall is contingent upon presenting the University Identity Card along with the downloaded examination schedule.
+It is the student's responsibility to read all instructions on the answer book and correctly fill in all the particulars on the cover page.
+Students should not carry any material that could be considered for unfair means, and the flying squad is authorized to conduct physical checks of clothes and shoes.
+A candidate shall not write their name or leave any identifying marks in the answer booklet, as any such act is deemed to be use of unfair means. Leaving the examination hall without the invigilator's permission is not allowed.
+Actions considered malpractice include writing on desks or walls and carrying programmable calculators, electronic gadgets, mobile phones, or books into the examination hall.
+If a student is caught using unfair means (UFM), they will be provided with a new answer booklet to continue the exam.
+Lastly, students must not write anything on the question paper; any rough work must be done on the last page of the answer booklet.

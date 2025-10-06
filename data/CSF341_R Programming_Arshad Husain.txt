@@ -1,0 +1,108 @@
+﻿Paper Code: CSF341  Printed Page 1 of 2
+  
+   
+
+  
+
+DIT UNIVERSITY DEHRADUN 
+         B.TECH (CSE) MID TERM EXAMINATION, ODD SEM 2022-23 (SEM V) 
+
+ 
+
+Roll No.             
+
+Subject Name: R Programming 
+Time: 2 Hours Total Marks: 50 
+
+Note: All questions are compulsory.  No student is allowed to leave the examination hall before the completion of the exam. 
+______________________________________________________________________________________________________ 
+ 
+
+Q.1)  Attempt all Parts : 
+ (a) Write the difference between followings. 
+
+(i) <- and <<- 
+(ii) cat and paste  
+
+ (b) Write all the possible ways to create vector in R. 
+ (c)  Write a R program with output to check if a character or a sequence of characters are present in a string. 
+ (d) What is the output of  
+
+(i) x=c(1,2,3) 
+class(x) 
+
+(ii) x=1:3 
+class(x)       
+
+  [4 x 2.5= 10] 
+ 
+Q.2)   Attempt all Parts : 
+ (a) Write a program which uses the concept of default parameter values in function. 
+ (b) What is the output of  
+
+(i) 
+a<-10 
+typeof(a)        
+          
+(ii)   
+text <- "awesome " 
+p=cat("I am", text) 
+print(p)       
+
+ (c)  Write a R program to find the sum of all the even number between 1 to 99 using recursion. 
+ (d) What is the output of  
+
+my_function=function (fname, lname) 
+{ 
+  cat(”hello ”, fname) 
+}    
+my_function(“ABC”) 
+
+  [4 x 2.5= 10] 
+ 
+Q.3)     Attempt any Two Parts : 
+
+ (a) In R programming 
+(i)  Which statement is used to stop the loop before it has looped through all the items? 
+(ii)  Which statement is used to skip an iteration without terminating the loop? 
+(iii) Which loop is used to execute the same code again and again until an explicit termination 
+
+condition is met? 
+(iv) Which loop does not require an indexing variable to set beforehand, like with while loops? 
+(v) Output of 17 %/% 3                                                                                         
+
+ (b) Write a program to explain element wise AND and OR operator. 
+
+ (c) What is the output of  
+
+ 
+ 
+
+
+
+Paper Code: CSF341  Printed Page 2 of 2
+  
+   
+
+p=1:10 
+m=p+c(1,2,3) 
+print(m) 
+
+    [2 x 5= 10] 
+ 
+Q.4)     Attempt any Two Parts : 
+
+ (a) Write a R program with output to find the frequency of a digit in the number. 
+ (b) Write all the properties of atomic vectors. 
+ (c) Describe any five arithmetic operators using an appropriate R program with output.   
+  [2 x 5= 10] 
+
+ 
+Q.5)     Attempt any Two Parts : 
+
+ (a) Write a R Program to check a number is palindrome or not. 
+ (b) Write a R program with output to find the sum of the digits of the number. 
+ (c) Write a program to demonstrate the nesting of functions. 
+  [2 x 5= 10] 
+
+-----END OF PAPER ----

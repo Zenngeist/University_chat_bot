@@ -1,0 +1,101 @@
+﻿Subject Code: IT345_Back  Printed Page 1 of 2
+  
+   
+
+ 
+
+DIT UNIVERSITY, DEHRADUN 
+         B.TECH (IT) : END TERM EXAMINATION, EVEN SEM 2022-23 (SEM VI) 
+
+ 
+
+Roll No.             
+
+Subject Name: R Programming 
+Time: 3 Hours Total Marks: 100 
+
+Note: All questions are compulsory.  No student is allowed to leave the examination hall before the completion of the exam. 
+______________________________________________________________________________________________________ 
+ 
+
+Q.1)  Attempt all Parts : 
+ (a) Two vectors X and Y are defined as follows:  
+
+X <- c(3, 2, 4) and Y <- c(1, 2). 
+ 
+What will be output of vector Z that is defined as Z <- X*Y. 
+
+ (b) Write the difference between list and vector with proper program. 
+ (c)  What happens if we try to store a different data types in a vector. Explain with example. 
+ (d) Write a program to create a list, name its variable and access them with the help of assigned names.  
+  [4 x 5= 20] 
+ 
+Q.2)   Attempt all Parts : 
+ (a) How to convert a list into a vector explain with suitable program? 
+ (b) What is the output of the following program: 
+
+vec = c(1, 2, 3, 4, 2, 1, 4, 6)  
+count = 0 
+x = 4 
+for(i in vec){  
+  if(vec[i] == x){  
+      count = count + 1  
+      }  
+    } 
+print(count) 
+
+ (c)  Write about type conversion in R with suitable program. 
+ (d) Write a program to find the mean, median, standard deviation and variance of the following numbers: 
+
+5, 7, 6, 9, 11, 10, 7, 6, 12, 9, 3, 6, 1, 11, 14, 10, 2 
+  [4 x 5= 20] 
+ 
+Q.3)     Attempt any two parts: 
+
+ (a) Write a program a read an excel file using xlsx package and write its data to another sheet say “newsheet” of 
+same excel file. 
+
+ (b) Write a program create a matrix of four rows and three columns and demonstrate use of rbind and cbind 
+operations on created matrix. 
+
+ (c) Create the following vectors in R: 
+a = (5, 10, 15, 20, … , 100) b = (99, 98, 97, … , 50) 
+Use vector arithmetic to multiply these vectors and call the result ‘c’. Select subsets of c to identify the 
+following: 
+ 
+(i) What are the 10th, 11th, and 12th elements of c? 
+(ii) How many elements of vector c are less than 1000? 
+
+  [2 x 10= 20] 
+ 
+Q.4)     Attempt any two parts : 
+
+ (a) Write a program to find the mode of given dataset using functions. 
+ (b) Write a program to add a row in existing data frame and print the summary and structure. 
+
+ 
+ 
+
+
+
+Subject Code: IT345_Back  Printed Page 2 of 2
+  
+   
+ (c) Create a data frame with attributes Eid, Ename, Esalary, Eclass and Edept. Name its rows and find a subset of 
+
+data frame who’s department is HR and salary is greater than 500. 
+  [2 x 10= 20] 
+
+ 
+Q.5)     Attempt any two parts : 
+
+ (a) Write short notes on following with suitable syntax. 
+(i) Array  
+(ii) List 
+(iii) Matrix 
+
+ (b) Write a program to explain all the aspect of switch cases in R programming. 
+ (c) Write a program a read a CSV file and append its data to an existing “apdem.csv” file. 
+  [2 x 10= 20] 
+
+-----END OF PAPER ----

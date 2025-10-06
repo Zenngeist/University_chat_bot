@@ -1,0 +1,157 @@
+Faculty and Section Details
+Subject: Advanced Java
+The course coordinator is Mr. Piyush Anand.
+
+Advanced Java Sections A, B, C, and D are taken by Mr. Piyush Anand (Theory & Practical).
+
+Advanced Java Sections E, F, G, and H are taken by Mr. Anuj Kumar (Theory & Practical).
+
+Advanced Java Sections I and J are taken by Mr. Biswadip Bandyopadhyay (Theory & Practical).
+
+Advanced Java For Section K, the theory is taken by Mr. Biswadip Bandyopadhyay, and the practical is taken by Mr. Moynak Roy.
+
+Advanced Java Sections L, M, and N are taken by Mr. Ravi Shankar Jha (Theory & Practical).
+
+Advanced Java Sections O and P are taken by Mr. Sonu Pant (Theory & Practical).
+
+Subject: Computer Networks
+The course coordinator is Dr. Divya Lohani.
+
+Computer Networks For Section A, the theory is taken by Dr. Divya Lohani, and the practical is taken by Mr. Shahid Ul Haq.
+
+Computer Networks Section B is taken by Mr. Shahid Ul Haq (Theory & Practical).
+
+Computer Networks For Section C, the theory is taken by Dr. Divya Lohani, and the practical is taken by Mr. Shahid Ul Haq.
+
+Computer Networks Section D is taken by Ms. Shweta Paliwal (Theory & Practical).
+
+Computer Networks Sections E and F are taken by Dr. Naveen Kumar (Theory & Practical).
+
+Computer Networks Sections G and H are taken by Dr. N. Anandshree Singh (Theory & Practical).
+
+Computer Networks Sections I and J are taken by Mr. Kapil Dev Sharma (Theory & Practical).
+
+Computer Networks Sections K and L are taken by Ms. Ena Jain (Theory & Practical).
+
+Computer Networks Sections M and N are taken by Ms. Nidhi (Theory & Practical).
+
+Computer Networks Sections O and P are taken by Dr. Parul Saini (Theory & Practical).
+
+Computer Networks Section Q is taken by Ms. Shweta Paliwal (Theory & Practical).
+
+Subject: Artificial Intelligence (CSN304)
+
+Artificial Intelligence  Sections A and B are taken by Ms. Vishakha Arya (Theory & Practical).
+
+Artificial Intelligence  Section C is taken by Ms. Prakirti Raghuvanshi (Theory & Practical).
+
+Artificial Intelligence  For Section D, the theory and P1 practical are taken by Ms. Prakirti Raghuvanshi. The P2 practical is taken by Ms. Prakirti Raghuvanshi and Ms. Kiran Preet Bedi.
+
+Artificial Intelligence  For Section E, the theory is taken by Ms. Prakirti Raghuvanshi, and the practical is taken by Ms. Neha Sharma.
+
+Artificial Intelligence  Section F is taken by Dr. Huma Naz (Theory & Practical).
+
+Artificial Intelligence For Section G, the theory and P1 practical are taken by Dr. Huma Naz. The P2 practical is taken by Dr. Huma Naz and Ms. Neha Sharma.
+
+Artificial Intelligence For Section H, the theory is taken by Dr. Huma Naz, and the practical is taken by Ms. Kiran Preet Bedi.
+
+Artificial Intelligence Section I is taken by Mr. Ankit Aggarwal (Theory & Practical).
+
+Artificial Intelligence For Section J, the theory and P1 practical are taken by Mr. Ankit Aggarwal. The P2 practical is taken by Mr. Ankit Aggarwal, with the second instructor not yet allocated.
+
+Artificial Intelligence For Section K, the theory is taken by Mr. Ankit Aggarwal, and the practical is taken by Mr. Nitin Pasi.
+
+Artificial Intelligence Section L is taken by Ms. Vedna Sharma (Theory & Practical).
+
+Artificial Intelligence For Section M, the theory and P1 practical are taken by Ms. Vedna Sharma. The P2 practical is taken by Ms. Vedna Sharma and Ms. Shruti Singh.
+
+Artificial Intelligence For Section N, the theory is taken by Ms. Vedna Sharma, and the practical is taken by Ms. Shruti Singh.
+
+Artificial Intelligence Sections O and P are taken by Ms. Himani Sharma (Theory & Practical).
+
+Subject: R Programming
+The course coordinator is Dr. Gaurav Dhiman.
+
+R Programming Section A is taken by Dr. Gaurav Dhiman (Theory & Practical).
+
+R Programming For Section B, the theory and P1 practical are taken by Dr. Gaurav Dhiman. The P2 practical is taken by Mr. Vinay Saroya.
+
+R Programming Section C is taken by Dr. Ashok Kumar (Theory & Practical).
+
+R Programming For Section D, the theory and P1 practical are taken by Dr. Ashok Kumar. The P2 practical is taken by Mr. Vinay Saroya.
+
+R Programming Section E is taken by Mr. Vinay Saroya (Theory & Practical).
+
+R Programming For Section F, the theory and P1 practical are taken by Mr. Vinay Saroya. The P2 practical will be taken by a new faculty.
+
+Subject: Machine Learning
+The course coordinator is Dr. Anushikha Singh.
+
+Machine Learning Sections A and B are taken by Dr. Anushikha Singh (Theory & Lab).
+
+Machine Learning Sections C and D are taken by Dr. Vyomika Singh (Theory & Lab).
+
+Machine Learning Sections E and F are taken by Mr. Diwaker (Theory & Lab).
+
+Faculty Cabin Locations
+Dr. Anushikha Singh has cabin VED-210.
+
+Mr. Ankit Aggarwal has cabin Vedanta Block [Second Floor] - 218.
+
+Dr. Ashok Kumar has cabin Vedanta-310.
+
+Mr. Diwaker has cabin VED 218.
+
+Dr. Divya Lohani has cabin Vedanta - 408.
+
+Ms. Ena Jain has cabin Vedanta - 207.
+
+Dr. Gaurav Dhiman has cabin Vedanta-419.
+
+Dr. Huma Naz has cabin Vedanta Block [Second Floor] – 213.
+
+Mr. Kapil Dev Sharma has cabin Vedanta - 417.
+
+Ms. Kiran Preet Bedi has a cabin in Vivekananda Block [Ground Floor].
+
+Dr. N. Anandshree Singh has cabin Vedanta - 219.
+
+Dr. Naveen Kumar has cabin Vedanta - 217.
+
+Ms. Neha Sharma has cabin Vishwasarya Block [First Floor] - 110.
+
+Ms. Nidhi has cabin Vedanta - 312.
+
+Mr. Nitin Pasi has an office in Vedanta Block [Second Floor].
+
+Dr. Parul Saini has cabin VISH - 110.
+
+Mr. Piyush Anand has cabin Vivekananda Block [Second Floor] - 27.
+
+Ms. Prakirti Raghuvanshi has cabin Vedanta Block [Second Floor]-209.
+
+Mr. Shahid Ul Haq has cabin Vedanta - 204.
+
+Ms. Shruti Singh has a cubical in Vedanta Block [Second Floor].
+
+Ms. Shweta Paliwal has cabin Vedanta - 420.
+
+Ms. Vedna Sharma has cabin Vedanta Block [Second Floor]-209.
+
+Mr. Vinay Saroya has cabin Vedanta-315.
+
+Ms. Vishakha Arya has cabin Vedanta Block [Third Floor] – 313.
+
+The cabin location for Mr. Anuj Kumar is not specified.
+
+The cabin location for Mr. Biswadip Bandyopadhyay is not specified.
+
+The cabin location for Ms. Himani Sharma is not specified.
+
+The cabin location for Mr. Moynak Roy is not specified.
+
+The cabin location for Mr. Ravi Shankar Jha is not specified.
+
+The cabin location for Mr. Sonu Pant is not specified.
+
+The cabin location for Dr. Vyomika Singh is not specified.

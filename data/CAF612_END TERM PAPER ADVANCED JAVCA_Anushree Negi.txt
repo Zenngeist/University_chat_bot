@@ -1,0 +1,113 @@
+﻿Subject Code: CAF612  Printed Page 1 of 2 
+    
+
+ 
+
+DIT UNIVERSITY, DEHRADUN 
+       MCA : END TERM EXAMINATION, EVEN  SEM 2022-23 (SEM II) 
+
+ 
+
+Roll No.             
+
+Subject  Name: Advanced Java Programming 
+Time: 3 Hours Total Marks: 100 
+
+Note: All questions are compulsory.  No student is allowed to leave the examination hall before the completion of the exam. 
+________________________________________________________________________________________________________ 
+ 
+
+Q.1)  Attempt all Parts : 
+ (a) Give reasons for following statements: 
+
+A) Abstract class has constructor even though you cannot create object? 
+B) We create reference to superclass (abstract class reference)? 
+
+ (b) What is Deadlock? How to analyze and avoid deadlock situation? 
+
+ (c)   Elaborate the hierarchy of the Collection framework in Java. 
+
+ (d) Describe the following: 
+       I) Executors Framework. 
+      II) Lifecycle of Thread 
+
+  [4 x 5= 20] 
+Q.2)   Attempt all Parts : 
+ (a) Write a program to implement life cycle of a servlet. 
+ (b)  Explain the JDBC Architecture? 
+ (c)  What is synchronized method and synchronized block? Which one should be preferred, Why? 
+ (d) Differentiate between J2EE and J2ME. 
+  [4 x 5= 20] 
+ 
+Q.3)     Attempt any two parts : 
+
+ (a) A. Write the output of the following code:  
+public class Test {  
+public static void main(String[] args) {  
+Map map = new LinkedHashMap();  
+map.put("123", "John Smith");  
+map.put("111", "George Smith");  
+map.put("123", "Steve Yao");  
+map.put("222", "Steve Yao");  
+System.out.println("(1) " + map);  
+System.out.println("(2) " + new TreeMap(map));  
+}  
+}  
+ B. The following code has compilation errors, runtime error, or other problems, or no 
+problems?  
+public class A {  
+public static void main(String args[]) {  
+int[] a = new int[10];  
+int[] c = new int[20];  
+a = c;  
+}  
+} 
+
+ 
+ 
+
+
+
+Subject Code: CAF612  Printed Page 2 of 2 
+    
+
+ (b)  Explain how a server and a client communicate to each other using streams on top of 
+server and client sockets. Explain with the help of small block of codes and appropriate 
+classes.  
+
+ (c) Illustrate Threadpool and ExecutorService in Java concurrency. 
+  [2 x 10= 20] 
+
+ 
+Q.4)     Attempt any two parts : 
+
+ (a) What are the different types of drivers in JDBC? What are the components of JDBC? 
+
+ (b) Define Blocking Queue? How can we implement Producer-Consumer problem using Blocking Queue? 
+
+ (c) For the user actions mentioned below, mention what kind of Jcomponents are used, and 
+what kinds of events are generated.    
+1. Click a button    
+2. Click a checkbox 
+3. Click a radio button 
+4.  Press return on a text field  
+5. Mouse pressed, released, etc. 
+
+  [2 x 10= 20] 
+ 
+Q.5)     Attempt any two parts : 
+
+ (a) Explain how communication takes place between a server and client using a Datagram 
+socket. Explain with the help of small block of codes and appropriate classes.    
+
+ (b)  Write a detailed note on Checked Exceptions and Unchecked Exceptions in Java.  
+ 
+
+ (c) Differentiate between the following: 
+ 
+i)Generic Servlet Vs Http Servlet 
+ii)Get Vs Post method 
+iii)forward() method Vs sendRedirect()  method 
+
+  [2 x 10= 20] 
+-----END OF PAPER ----

@@ -1,0 +1,13 @@
+The attendance for the course 'Aptitude and Soft Skills' (CDC201) is 60.00%. Total Scheduled Classes: 32 Sessions Held Till Now: 15 Classes Present: 9 Classes Absent: 4
+
+The attendance for the course 'Advanced Java Programming' (CSN302) is 65.63%. Total Scheduled Classes: 63 Sessions Held Till Now: 32 Classes Present: 21 Classes Absent: 7
+
+The attendance for the course 'Computer Networks' (CSN303) is 62.50%. Total Scheduled Classes: 63 Sessions Held Till Now: 32 Classes Present: 20 Classes Absent: 9
+
+The attendance for the course 'Artificial Intelligence' (CSN304) is 74.19%. Total Scheduled Classes: 62 Sessions Held Till Now: 31 Classes Present: 23 Classes Absent: 5
+
+The attendance for the course 'R Programming' (CSN341) is 73.91%. Total Scheduled Classes: 46 Sessions Held Till Now: 23 Classes Present: 17 Classes Absent: 4
+
+The attendance for the course 'Machine Learning' (CSN344) is 52.00%. Total Scheduled Classes: 46 Sessions Held Till Now: 25 Classes Present: 13 Classes Absent: 7
+
+The attendance for the course 'Product Design and Development' (MEN446) is 80.00%. Total Scheduled Classes: 46 Sessions Held Till Now: 25 Classes Present: 20 Classes Absent: 4

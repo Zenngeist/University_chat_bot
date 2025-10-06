@@ -1,0 +1,91 @@
+Student Profile Summary
+The student's ERP ID is 1000020309 and the Roll Number is 23A03A0382.
+
+The student's name is SHIVAM BAILWAL.
+
+The program is BTCSE with a specialization in Artificial Intelligence, Machine Learning and Robotics.
+
+The student has earned 82 credits and has 78 credits pending.
+
+The current CGPA is 9.11.
+
+The academic tagging year is 2023 for the ODD session.
+
+The marks percentage in the qualifying exam was 93.
+
+The student's status is Normal.
+
+Academic Performance Summary
+Academic Year 2023-2024 (ODD Semester)
+
+In the course Engineering Chemistry (CHN101), the grade obtained was C+.
+
+In the course Programming for Problem Solving (CSN101), the grade obtained was B+.
+
+In the course Electrical and Electronics Engineering Practice (EEN143), the grade obtained was A.
+
+In the course Professional Communication (ENGN101), the grade obtained was B.
+
+In the course Engineering Mathematics I (MAN101), the grade obtained was A+.
+
+The SGPA for the ODD 2023-2024 semester was 7.95.
+
+Academic Year 2023-2024 (EVEN Semester)
+
+In the course Data structure and algorithms (CSN102), the grade obtained was A.
+
+In the course Indian English Literature (ENGN286), the grade obtained was A+.
+
+In the course Engineering Mathematics II (MAN102), the grade obtained was B+.
+
+In the course Engineering Graphics (MEN101), the grade obtained was A.
+
+In the course Engineering Physics (PYN101), the grade obtained was A.
+
+The SGPA for the EVEN 2023-2024 semester was 8.95.
+
+Academic Year 2024-2025 (ODD Semester)
+
+In the course Computer Organization and Architecture (CSN201), the grade obtained was A+.
+
+In the course Discrete Mathematics (CSN202), the grade obtained was A+.
+
+In the course Introduction to Java Programming (CSN203), the grade obtained was A+.
+
+In the course Indian Constitution (CVC102), the grade obtained was A.
+
+In the course Principles of Management (ECON157), the grade obtained was A+.
+
+In the course Probability and Statistics (MAN202), the grade obtained was A.
+
+The SGPA for the ODD 2024-2025 semester was 9.71.
+
+Academic Year 2024-2025 (EVEN Semester)
+
+In the course Operating Systems (CSN204), the grade obtained was A+.
+
+In the course Database Management Systems (CSN205), the grade obtained was A+.
+
+In the course Design and Analysis of Algorithms (CSN206), the grade obtained was A+.
+
+In the course Environmental Science (CVC101), the grade obtained was A.
+
+In the course Digital Electronics and applications (ECN244), the grade obtained was A+.
+
+In the course Engineering Economics (ECON354), the grade obtained was A.
+
+The SGPA for the EVEN 2024-2025 semester was 9.76.
+
+Pending Compulsory Courses for Graduation:
+
+Advanced Java Programming (CSF206), a 4-credit Discipline Core course, is pending.
+
+Software Engineering (CSN301), a 4-credit Discipline Core course, is pending.
+
+Advanced Java Programming (CSN302), a 4-credit Discipline Core course, is pending.
+
+Computer Networks (CSN303), a 4-credit Discipline Core course, is pending.
+
+Artificial Intelligence (CSN304), a 4-credit Discipline Core course, is pending.
+
+Theory of Computation (CSN305), a 4-credit Discipline Core course, is pending.

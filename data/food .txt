@@ -1,0 +1,49 @@
+Meal Timings:
+Breakfast is served from 7 AM to 9 AM.
+Lunch is served from 12 PM to 2 PM. On Sunday, the brunch meal is served from 11:30 AM to 2 PM.
+Snacks are served from 5 PM to 6 PM.
+Dinner is served from 7 PM to 9 PM.
+
+Monday Menu:
+On Monday for breakfast, we have Aloo Paratha, Butter/Curd, Mix Pickle, Bread Slice, Jam, and Tea/Milk.
+On Monday for lunch, we have Green Salad+Onion, Whole Fruit, Jeera Rice, Dal Makhani, Soya Aloo Tarkari, Ghee Roti, Boondi Raita, and Mix Pickle.
+On Monday for snacks, we have Tea and Samosa with Sount Chutney.
+On Monday for dinner, we have Green salad, Ghee Roti, Plain Rice, Yellow Dal Arhar, Aloo Gajar Matar, Mix Pickle, and Sooji Halwa.
+
+Tuesday Menu:
+On Tuesday for breakfast, we have Plain Paratha, Aloo Tarkari, Mix Pickle, Bread Slice, Jam, and Tea/Milk.
+On Tuesday for lunch, we have Green Salad+Onion, Whole Fruit, Plain Rice, Sabut Masoor Tadka, Kadhai Paneer, Ghee Roti, and Mix Pickle.
+On Tuesday for snacks, we have Tea and Mumbai Masala S/W with Tomato Ketchup.
+On Tuesday for dinner, we have Green salad, Ghee Roti, Jeera Rice, Dal Dhaba, Veg Kofta, Mix Pickle, and Besan Burfi.
+
+Wednesday Menu:
+On Wednesday for breakfast, we have Plain Paratha, Aloo Tarkari, Egg Bhurji, Bread Slice, Jam, and Tea/Milk.
+On Wednesday for lunch, we have Green Salad+Onion, Whole Fruit, Tadka Rice, Black Chana, Kadhai Veg, Ghee Roti, Mix Veg Raita, and Fryums.
+On Wednesday for snacks, we have Tea and Bread Pakoda with Green Chutney.
+On Wednesday for dinner, we have Green salad, Ghee Roti, Plain Rice, Chole Masala, Aloo Palak/Aloo Capsicum, Mix Pickle, and Ice Cream.
+
+Thursday Menu:
+On Thursday for breakfast, we have Vada, Sambar, Tomato Chutney, Bread Slice, Jam, and Tea/Milk.
+On Thursday for lunch, we have Green Salad+Onion, Whole Fruit, Plain Rice, Rajma Masala, Cabbage Matar, Ghee Roti, Mint Raita, and Mix Pickle.
+On Thursday for snacks, we have Tea and Poha with Green Chutney.
+On Thursday for dinner, we have Green salad, Ghee Roti, Plain Rice, Yellow Dal Mix, Soya Matar semi Gravy, Mix Pickle, and Gulab Jamun.
+
+Friday Menu:
+On Friday for breakfast, we have Kulcha, Mattar, Bread Slice, Jam, and Tea/Milk.
+On Friday for lunch, we have Green Salad+Onion, Whole Fruit, Jeera Rice, Kadi Pakoda, Jeera Aloo, Ghee Roti, and Mix Pickle.
+On Friday for snacks, we have Tea and Veg Croquettes with Mint Chutney.
+On Friday for dinner, we have Green salad, Ghee Roti, Plain Rice, Dal Punchmale, Paneer Butter Masala, Egg Masala, and Rice Kheer.
+
+Saturday Menu:
+On Saturday for breakfast, we have Sweet Daliya, Black Chana Masala, Mint Chutney, Bread Slice, Jam, and Tea/Milk.
+On Saturday for lunch, we have Onion, Whole Fruit, Veg Biryani, Punjabi Chole, Green Chutney, Ghee Roti, Boondi Raita, and Papad.
+On Saturday for snacks, we have Tea and Macroni with Red Sauce.
+On Saturday for dinner, we have Green Salad, Ghee Roti, Jeera Rice, Malka Dal Tadka, Bhindi Do Pyaza/Matar Mushroom, Mix Pickle, and Kala Jamun.
+
+Sunday Menu:
+On Sunday for breakfast, we have Bhatore, Choley, Onion, Bread Slice, Jam, and Tea/Milk.
+On Sunday there is a brunch meal instead of lunch. The brunch includes Green Salad+Onion, Fruits, Plain Rice, Urad Chana, Beans Aloo, Plain Curd, and Ghee Roti.
+On Sunday for snacks, we have Tea and Coleslaw S/W with Tomato Ketchup.
+On Sunday for dinner, we have Green Salad, Ghee Roti, Plain Rice, Rajma, Aloo Tamatar Tarka, Fryums, and Sakkar Para/Jalebi.
+
+Note: Paneer, Eggs, Snacks Items, and Desserts will be served as a portion.

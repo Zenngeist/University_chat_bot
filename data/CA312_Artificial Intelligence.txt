@@ -1,0 +1,70 @@
+﻿Paper Code: CA312_Moderated  Printed Page 1 of 1
+  
+   
+
+ 
+
+DIT UNIVERSITY, DEHRADUN 
+         BCA(Regular/Back:)E ND TERM EXAMINATION, EVEN SEM 2022-23 (SEM VI) 
+
+ 
+
+Roll No.             
+
+Subject Name: Artificial Intelligence 
+Time: 3 Hours Total Marks: 100 
+
+Note: All questions are compulsory.  No student is allowed to leave the examination hall before the completion of the exam. 
+______________________________________________________________________________________________________ 
+ 
+
+Q.1)  Attempt all Parts: 
+ (a) What do you understand by optimization? Explain genetic algorithm. 
+ (b) Explain semantic network representation and frames in knowledge representation with their examples. 
+ (c)  Describe union, intersection and complement operations on fuzzy sets with their suitable  examples. 
+ (d) Explain the various components of a rule based system with the help of a diagram. 
+  [4 x 5= 20] 
+ 
+Q.2)   Attempt all Parts: 
+ (a) Define the term reasoning with example. Distinguish between monotonic and non-monotonic reasoning with 
+
+examples. 
+ (b) What are the different types of knowledge in artificial intelligence? 
+ (c)  Differentiate between feedforward and feedback artificial neural network with diagrams. 
+ (d) What do you understand by probabilistic reasoning? Give an example. Define conditional probability with 
+
+formula.    
+  [4 x 5= 20] 
+ 
+Q.3)     Attempt any two parts: 
+
+ (a) Explain various propositional logical connectives along with their truth tables. 
+ (b) What do you understand by fuzzy logic? Give an example. Explain the architecture of a fuzzy logic system with 
+
+diagram. 
+ (c) Describe expert systems. What are the different applications of expert systems? 
+   [2 x 10= 20] 
+
+ 
+Q.4)     Attempt any two parts: 
+
+ (a) Define artificial intelligence. Discuss the various applications of artificial intelligence. 
+ (b) Explain the different components of expert systems with diagram. 
+ (c) Describe machine learning. Explain the various categories of machine learning with examples. 
+  [2 x 10= 20] 
+
+ 
+Q.5)     Attempt any two parts: 
+
+ (a) Solve the following problem using Prolog programming: 
+In a class, there are 70% of the students who like English and 40% of the students who like English and 
+mathematics, and then what is the percent of students who like English also like mathematics? 
+
+ (b) Perform the addition, subtraction and average operations on two numbers using Prolog programming. Take the 
+two numbers as 30 and 20. 
+
+ (c) What do you understand by informed search techniques? What are the various types of informed search 
+techniques? How informed search is different from uninformed search? 
+
+  [2 x 10= 20] 
+-----END OF PAPER ----

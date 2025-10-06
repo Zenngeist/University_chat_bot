@@ -1,0 +1,120 @@
+﻿Paper Code: CAF612  Printed Page 1 of 2
+   
+
+DIT UNIVERSITY DEHRADUN 
+MCA MID TERM EXAMINATION, EVEN SEM 2023-24 (SEM II) 
+
+ 
+
+Roll No.             
+Subject Name: Advanced Java Programming 
+
+Q.1)  Attempt all Parts: Total 
+ (a) Describe the event handling mechanism in Java Swing. Provide an example of implementing an Marks: 
+
+ActionListener for a JButton. 50 
+
+ (b) Write a program to display a button with an image on it using swing. The image on the button will 
+change when the button is clicked. 
+
+ (c)  What is dynamic binding explain with the help of program?  
+ (d) What is an iterator in the context of Java Collections? Provide an example of using an iterator to 
+
+traverse elements in a List. 
+  [4 x 2.5= 10] 
+Q.2)   Attempt all Parts: 
+ (a) Explain the essential role of layout managers in structuring and positioning user interface 
+
+components within a container. Create a program that employs BorderLayout as an example of 
+utilizing layout management in Java. 
+
+ (b) Give sequential steps to use JScrollPane control. Also give syntax of three constructors of JscrollPane 
+class. 
+
+ (c)  The following code is an example of: 
+a. Constructor Overloading b. Constructor Chaining c. Both Constructor  
+Overloading and Chaining d. None of the Above  
+Justify Your Answer ! 
+public class Car Vehicle 
+{ 
+ int x; 
+ Car(int y)  
+ { 
+ x = 5; 
+ } 
+ Car(){ 
+ this(5); 
+} 
+} 
+
+ (d) What is the main purpose of Collection framework? Write the key interfaces of the collection 
+Framework. 
+
+  [4 x 2.5= 10] 
+Q.3)     Attempt any Two Parts : 
+ (a) Write a program to show the difference between an abstract class and an Interface. 
+
+ (b) Design a Java Swing GUI application for a simple chat system. The application should consist of the 
+following components: 
+
+1. A text area for displaying the chat messages. 
+2. A text field for entering new messages. 
+3. A button to send messages. 
+4. A list of online users. 
+
+Implement the following functionalities: 
+When a user enters a message and clicks the "Send" button, the message should be displayed in the 
+text area with a timestamp. 
+
+ (c) Write a Java program illustrating the difference between Collection and Collections. How do you 
+traverse the elements in a set? 
+
+  [2 x 5= 10] 
+ 
+Q.4)     Attempt any Two Parts : 
+
+ (a) Distinguish between AWT and Swing in Java. Elaborate the hierarchy of Swing class in Java. 
+Additionally, elucidate key methods within the Swing class, supported by code examples. 
+
+ 
+ 
+
+
+
+Paper Code: CAF612  Printed Page 2 of 2
+   
+
+ (b) Create three maps to connect students with their ages: HashMap, LinkedHashMap, and TreeMap. 
+First, use HashMap, where student names are keys and ages are values. Next, convert the HashMap 
+into a TreeMap and show the entries in ascending order of names. Finally, make a LinkedHashMap, 
+add the same entries, and display them. 
+
+ (c) Create a Frame in Java using Swing to create the following form. 
+ 
+
+ 
+  [2 x 5= 10] 
+
+ 
+Q.5)     Attempt any Two Parts : 
+
+ (a) Suppose the ArrayList list contains {"Dallas", "Dallas", "Houston",  
+"Dallas"}. What is the list after invoking list.remove("Dallas") one time?  
+Does the following code correctly remove all elements with value "Dallas" from the list? If not, 
+correct the code. 
+for (int i = 0; i < list.size(); i++) 
+ list.remove("Dallas"); 
+
+ (b) Write a Java program to demonstrates the implementation of both Min Priority Queue and Max 
+Priority Queue in Java. 
+
+ (c) How can you instantiate a Vector? Explain the process of adding or inserting a new element into a 
+Vector. Describe the steps to remove an element from a Vector. Lastly, write the method for 
+determining the size of a Vector.  
+
+  [2 x 5= 10] 
+-----END OF PAPER ---- 
+
+Time: 2 Hours 
+Note: All questions are compulsory.  No student is allowed to leave the examination hall before the completion of the exam. 
+______________________________________________________________________________________________________

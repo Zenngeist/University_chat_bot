@@ -1,0 +1,100 @@
+﻿Subject Code: CSF351/CS348  PrintedPage 1 of 2
+  
+   
+
+ 
+
+DIT UNIVERSITY ,DEHRADUN 
+               B.TECH (CSE) : ENDTERM EXAMINATION,EVEN SEM 2022-23 (SEM VI) 
+
+ 
+
+Roll No.             
+
+Subject Name: Advanced Computer Networks 
+Time: 3 Hours Total Marks: 100 
+
+Note: All questions are compulsory.  No student is allowed to leave the examination hall before the completion of the exam. 
+______________________________________________________________________________________________________ 
+ 
+
+Q.1)  Attempt all Parts : 
+ (a) What are the different wireless standards used in communication? Differentiate between them. 
+ (b) What is SSID? How is it used in connection establishment? 
+ (c)  Explain WEP and WPA protocols. Which one is better in providing wireless security? 
+ (d) Define the following terms used in cellular networks: 
+
+i) Cell 
+ii) Modulation 
+iii) Time Division Multiplexing (TDMA) 
+iv) Frequency Division  Multiplexing (FDMA) 
+v) Code  Division  Multiplexing (CDMA) 
+
+  [4 x 5= 20] 
+ 
+Q.2)   Attempt all Parts : 
+ (a) Which shape is universally adopted for designing a cell? Explain why. 
+ (b) Demonstrate `key to SAFE’ using an appropriate diagram. 
+ (c)  Explain content networking design. 
+ (d) Explain the Distributed DoS (DDoS) attack with the help of a diagram. 
+  [4 x 5= 20] 
+ 
+Q.3)     Attempt any two parts : 
+
+ (a) What is M/M/1 queue. If `µ’ is the mean service rate, and `λ’ is the mean arrival rate, calculate the following 
+metrics: 
+
+i) Probability of the system having `n’ number of customers. 
+ii) Expected number of customers in the system. 
+iii) Average time spent by the customer in the system. 
+
+ (b) Explain the following processes in detail: 
+i) Poisson Process 
+ii) Markov Process 
+iii) Birth-death Process 
+
+ (c) Explain the different generations in cellular networks with their advantages and disadvantages. 
+  [2 x 10= 20] 
+
+ 
+Q.4)     Attempt any two parts : 
+
+ (a) Describe the following attacks: 
+i) TCP SYN Flooding 
+ii) ICMP Smurf Flooding 
+iii) UDP Flooding 
+
+ (b) What are access attacks. Explain its various types in detail. 
+ (c) Consider the following nodes in a wireless ad-hoc network: 
+
+ 
+
+ 
+
+ 
+ 
+
+
+
+Subject Code: CSF351/CS348  PrintedPage 2 of 2
+  
+   
+
+Here, node `B’ is in the communication range of nodes `A’ and `C’. 
+i) Explain hidden terminal problem by considering the above wireless network. 
+ii) Explain Exposed terminal problem by considering the above wireless network. 
+
+  [2 x 10= 20] 
+ 
+Q.5)     Attempt any two parts : 
+
+ (a) What are the different phases of SAFE campus design.  Explain the following terms in detail: 
+i) Attack Surface 
+ii) Business Flows 
+iii) Security Capabilities 
+
+ (b) Describe various network security best practices. 
+ (c) Explain three phases of communication from the mobile host to the remote host. 
+  [2 x 10= 20] 
+
+-----END OF PAPER ----

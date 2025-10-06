@@ -1,0 +1,82 @@
+﻿Paper Code: CAF206  Printed Page 1 of 1 
+w   
+
+DIT UNIVERSITY DEHRADUN 
+  Regular/Back BCA MID TERM EXAMINATION, EVEN SEM 2023-24 (SEM IV) 
+
+ 
+
+Roll No.             
+Subject Name: Computer Networks 
+
+Time: 2 Hours                                                        Total Marks: 50 
+
+Note: All questions are compulsory.  No student is allowed to leave the examination hall before the completion of the exam. 
+______________________________________________________________________________________________________ 
+
+Q.1)  Attempt all Parts: 
+ (a) Draw the OSI Layered model and the TCP/IP layered model.  
+ (b) What do you understand by a Protocol Data Unit (PDU)? Name the PDU for data link layer and 
+
+network layer. 
+ (c)  Name and define the three fundamental characteristics of data communication. 
+ (d) Draw a hybrid topology with star backbone and four ring topologies. List the consequence of a 
+
+single link failure in any one of the four ring topologies. 
+  [4 x 2.5= 10] 
+Q.2)   Attempt all Parts: 
+ (a) Define bit stuffing. A bit string, 0111101111101111110, needs to be transmitted at the data link 
+
+layer. What is the string actually transmitted after bit stuffing (highlight the stuffed bits)?   
+ (b) Define bandwidth. Suppose a device is sending out data at a rate of 2000 bps. Calculate how long 
+
+will it take to send a file of 100000 characters.  Assume 1 character contains 8 bits. 
+ (c)  Define attenuation. The attenuation of a signal is −10 dB. What is the final signal power if it was 
+
+originally 5W? 
+ (d) List the three services provided by the data link layer to the network layer. Give one example for 
+
+each category of service. 
+  [4 x 2.5= 10] 
+Q.3)     Attempt any Two Parts: 
+
+ (a) Discuss five distinct differences between hub and bridge. Answer must be written in tabular form. 
+ (b) Discuss five distinct differences between checksums and CRCs. Answer must be written in tabular 
+
+form. 
+ (c) Discuss five distinct differences between packet switching and circuit switching.  Answer must be 
+
+written in tabular form. 
+  [2 x 5= 10] 
+
+Q.4)     Attempt any Two Parts: 
+ (a) The distance between source and destination is 9 * 1010 m, Calculate the channel utilization if a 
+
+stop-and-wait protocol is used for transmission on a 64 Mbps channel. Assume frame size to be 32 
+KB and speed of light is 3 * 108 m/s. 
+
+ (b) Consider a 50 Kbps satellite channel with a 250-millisecond propagation delay. Using one-bit sliding 
+window protocol and frame size of 1000 bit, calculate the percentage of time the sender is blocked 
+i.e., not able to send any frame.  
+
+ (c) What is the total latency for a frame of size 5,000,000 bits that is being sent on a link with 10 
+intermediate devices (i.e. covers 10 hops) each having a queuing time of 2 µs and a processing time 
+of 1 µs. The length of the link is 2000 km. The speed of propagation inside the link is 2 × 108 m/s. 
+The link has a bandwidth of 5 Mbps.  
+
+  [2 x 5= 10] 
+Q.5)     Attempt any Two Parts: 
+
+ (a) Explain with diagram Go-Back-N (GBN) and Selective Repeat Automatic Repeat Request (ARQ) 
+techniques. Your explanation should make it clear when GBN is best suited and when Selective 
+Repeat is best suited. 
+
+ (b) Explain with diagram the structure of an optic fiber cable. What is the approx. core width in single 
+mode and multimode fiber? How are the fibers laid in ground, and in deep sea water? 
+
+ (c) A 12-bit hamming code 111001001111 arrives at the receiver. Check if the received message is 
+correct or not. What was the original bit pattern sent on the medium? Assume single bit error and 
+even parity. Show all steps in detail. 
+
+  [2 x 5= 10] 
+-----END OF PAPER ---

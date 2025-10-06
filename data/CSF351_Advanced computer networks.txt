@@ -1,0 +1,121 @@
+﻿Paper Code: CSF351  Printed Page 1 of 2 
+    
+
+  
+
+DIT UNIVERSITY DEHRADUN 
+         B.TECH MID TERM EXAMINATION, EVEN  SEM 2023-24 (SEM VI) 
+
+ 
+
+Roll No.             
+
+Subject Name: Advanced Computer Networks 
+Time: 2 Hours Total Marks: 50 
+
+Note: All questions are compulsory.  No student is allowed to leave the examination hall before the completion of the exam. 
+______________________________________________________________________________________________________ 
+
+Q.1)  Attempt all Parts : 
+ (a) How do routers exchange routing table updates in dynamic routing protocols such as RIP, OSPF, and 
+
+BGP? 
+ (b) Analyze frequency bands 2.4 GHz and 5 GHz used in wireless networks, and identify any two 
+
+differences between them. 
+ (c)  How does Mobile IP enable mobile devices to maintain connectivity while moving between 
+
+different networks? 
+ (d) What happens if there are two or more paths to the same network with different metrics? Which 
+
+path will be chosen? 
+  [4 x 2.5= 10] 
+Q.2)   Attempt all Parts : 
+ (a) Assess the effectiveness of wireless network components in meeting the performance requirements 
+
+and user expectations. 
+ (b) A block of addresses is granted to a small organization. We know that one of the addresses is 
+
+194.168.32.56/30. What will be the first address and the last address in the block? 
+ (c)  Explain how Mobile IP works in a simplified scenario, highlighting its key components and the process 
+
+involved when a mobile device moves from one network to another. 
+ (d) In a cellular network, a particular cell has 30 available channels. If the reuse factor is 4, how many 
+
+cells can exist within the same cluster? What is the total number of available channels for the entire 
+cellular system? 
+
+  [4 x 2.5= 10] 
+Q.3)     Attempt any Two Parts : 
+
+ (a) Consider a small network with four routers: A, B, C, and D, interconnected as follows: 
+A is directly connected to B and D. 
+B is directly connected to A, C, and D. 
+C is directly connected to B and D. 
+D is directly connected to A, B, and C. 
+The cost of each link is as follows: 
+A-B: 2 
+A-D: 3 
+B-C: 1 
+B-D: 2 
+C-D: 2 
+Assume that the initial distance vector at each router is: 
+Router A: (A:0, B:2, C:∞, D:3) 
+Router B: (A:2, B:0, C:1, D:2) 
+Router C: (A:∞, B:1, C:0, D:2) 
+Router D: (A:3, B:2, C:2, D:0) 
+Calculate the distance vectors at each router after one iteration using RIP. 
+
+ (b) Suppose you are tasked with optimizing the coverage of a cellular network in a rural area with low 
+population density. How would you strategically place cell towers to ensure the best coverage while 
+minimizing infrastructure costs? 
+
+ (c) Describe the differences between RIP and RIPng regarding addressing and protocol features. 
+ 
+
+ 
+
+
+
+Paper Code: CSF351  Printed Page 2 of 2 
+    
+
+  [2 x 5= 10] 
+Q.4)     Attempt any Two Parts : 
+
+ (a) A cellular network operates with a frequency reuse factor of 3. Each cell in the network uses a total 
+of 40 MHz of frequency spectrum for communication. Calculate the total available frequency 
+spectrum in the network and determine the bandwidth allocated to each cell if there are 30 cells in 
+total. 
+
+ (b) Compare the various versions of IEEE 802.11. 
+ (c) An ISP is granted a block of addresses starting with 150.80.0.0/16. The ISP wants to distribute these 
+
+blocks to 2600 customers as follows. 
+a. The first group has 200 medium-sized businesses; each needs 128 addresses. 
+b. The second group has 400 small businesses; each needs 16 addresses. 
+c. The third group has 2000 households; each needs 4 addresses. 
+Design the sub-blocks and give the slash notation for each sub-block. Find out how many addresses 
+are still available after these allocations. 
+
+[2 x 5= 10] 
+Q.5)     Attempt any Two Parts : 
+
+ (a) Compare and contrast the advantages and disadvantages of OSPF compared to RIP routing protocols. 
+
+ (b) Explain in detail about the following related cellular communication systems: 
+(i) Frequency Reuse 
+(ii) Hand-off mechanisms 
+
+ (c) Assume that source S and destination D are connected through two intermediate routers labeled R. 
+Explain how many times each packet must visit the network layer and the physical layer during 
+transmission from S to D. 
+ 
+ 
+
+ 
+ 
+ 
+
+  [2 x 5= 10] 
+-----END OF PAPER ----

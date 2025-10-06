@@ -1,0 +1,80 @@
+﻿Paper Code: CSF382  Printed Page 1 of 1
+   
+
+DIT UNIVERSITY DEHRADUN 
+         B.TECH.(ECE) MID TERM EXAMINATION, EVEN SEM 2023-24 (SEM VI) 
+
+ 
+
+Roll No.             
+Subject Name: Introduction to Machine Learning 
+
+Time: 2 Hours Total Marks: 50 
+
+Note: All questions are compulsory.  No student is allowed to leave the examination hall before the completion of the exam. 
+______________________________________________________________________________________________________ 
+
+Q.1)  Attempt all Parts: 
+ (a) Explain the following terms:                                                                                                 
+
+I. Random variable 
+II. Conditional Probability 
+
+ (b) A jar contains 10 red marbles, 5 blue marbles, and 3 green marbles. If one marble is drawn at 
+random, solve the probability of: 
+i. Not green 
+ii. Red 
+iii. Not blue 
+
+ (c)  An urn contains 4 red balls and 6 blue balls. Balls are drawn one at a time without replacement until 
+all the red balls are drawn. Evaluate the probability that exactly 5 draws are needed to remove all 
+the red balls?  
+
+ (d) A tutoring service specializes in preparing adults for high school equivalence tests. Among all the 
+students seeking help from the service, 63% need help in mathematics, 34% need help in English, 
+and 27% need help in both mathematics and English. Evaluate the percentage of students who need 
+help in either mathematics or English? 
+
+  [4 x 2.5= 10] 
+Q.2)   Attempt all Parts: 
+ (a) Explain the following terms:                                                                                                 
+
+I. Supervised Learning 
+II. Regression 
+
+ (b) Describe three machine learning problems and their solutions. 
+ (c)  In a machine learning model, what do the terms "training Set" and "test Set" mean? 
+ (d) Describe the five-stage process of machine learning. 
+  [4 x 2.5= 10] 
+Q.3)     Attempt any Two Parts: 
+
+ (a) Differentiate between supervised learning, unsupervised learning, and reinforcement learning.  
+ (b) Demonstrate how does overfitting affect classification models and what techniques can be 
+
+employed to prevent it? 
+ (c) Differentiate between multi-class classification and binary classification? What algorithms would 
+
+be used for a multi-class problem? 
+  [2 x 5= 10] 
+
+Q.4)     Attempt any Two Parts: 
+ (a) Classify the operators used in Python programming language.  Write a program to print the given 
+
+number is odd or even. 
+ (b) Compare the different types of conditional statements in Python? Write a program to check if the 
+
+given number is palindrome or not. 
+ (c) Explain type conversion in python. Write several functions for explicit type conversion. 
+  [2 x 5= 10] 
+
+Q.5)     Attempt any Two Parts: 
+ (a) Discuss the module and library. How can two NumPy arrays be compared? What distinguishes 
+
+NumPy's np.mean() from np.average()?  
+ (b) Distinguish overfitting from underfitting? What role do they play in data visualization?  
+ (c) In the NumPy array, examine how is it possible to count the number of times a specific positive 
+
+value appears? 
+  [2 x 5= 10] 
+
+-----END OF PAPER ----

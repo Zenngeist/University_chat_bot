@@ -1,0 +1,71 @@
+﻿Paper Code: MEF446  Printed Page 1 of 1
+  
+   
+
+  
+
+DIT UNIVERSITY DEHRADUN 
+         B.TECH   MID TERM EXAMINATION, EVEN SEM 2023-24 (SEM VI) 
+
+ 
+
+Roll No.             
+Subject Name: Product Design & Development 
+
+Time: 2 Hours Total Marks: 50 
+
+Note: All questions are compulsory.  No student is allowed to leave the examination hall before the completion of the exam. 
+______________________________________________________________________________________________________ 
+
+Q.1)  Attempt all Parts : 
+ (a) Describe the major stakeholders who participate in the product development process? 
+ (b) Describe clearly the characteristics of a successful product development? 
+ (c)  Describe briefly the major challenges of product development? 
+ (d) Elaborate the set of information included in the Mission statement? 
+  [4 x 2.5= 10] 
+ 
+Q.2)   Attempt all Parts : 
+ (a) What is Needs vs Metrics matrix, why it is important? 
+ (b) State the difference between the product vision statement and the product mission statement? 
+ (c)  Elaborate the five steps to identify customer needs? 
+ (d) Describe the term product specifications? State the importance of customer needs? 
+  [4 x 2.5= 10] 
+ 
+Q.3)     Attempt any Two Parts : 
+
+ (a) Can the process of identifying customer needs lead to the creation of innovative product concepts? 
+Explain with a suitable example? 
+
+ (b) Describe in detail the generic product development process? 
+ (c) Describe all the phases of product development-planning for products? 
+  [2 x 5= 10] 
+
+ 
+Q.4)     Attempt any Two Parts : 
+
+ (a) With the help of a diagram describe the composition of the product development team for an advanced 
+electrical appliance? 
+
+ (b) Describe the technique used to co-ordinate the technology development along with the product 
+planning? 
+
+ (c) Elaborate  all the fundamental steps  of  creating target specifications? 
+  [2 x 5= 10] 
+
+ 
+Q.5)     Attempt all the parts : 
+
+ (a) List a set of different Metrics corresponding to the needs that a mobile phone works properly? 
+ (b) Translate the following five customer statements about a student book bag into proper needs 
+
+statements: 
+a. “See how the leather on the bottom of the bag is all scratched; it’s ugly.” 
+b. “When I’m standing in line at the cashier trying to find my check book while balancing my bag 
+
+on my knee, I feel like a stork.” 
+c. “This bag is my life; if I lose it I’m in big trouble.” 
+d. “There’s nothing worse than a banana that’s been squished by the edge of a   textbook.” 
+e.  “I cannot use  my bag pack during rainy season.” 
+
+  [2 x 5= 10] 
+-----END OF PAPER ----

@@ -27,8 +27,10 @@ def load_advanced_rag_chain():
     if not GOOGLE_API_KEY:
         raise ValueError("Google API key not found. Make sure you have a .env file with GOOGLE_API_KEY set.")
 
-    VECTOR_STORE_PATH = "vectorstore"
-    DOC_STORE_FILE_PATH = "docstore.pkl"
+    SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+    DATA_PATH = os.path.join(SCRIPT_DIR, "data")
+    VECTOR_STORE_PATH = os.path.join(SCRIPT_DIR, "vectorstore")
+    DOC_STORE_FILE_PATH = os.path.join(SCRIPT_DIR, "docstore.pkl")
 
     try:
         with open(DOC_STORE_FILE_PATH, "rb") as f:

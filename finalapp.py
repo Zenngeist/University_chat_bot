@@ -20,7 +20,7 @@ DOC_STORE_FILE_PATH = os.path.join(SCRIPT_DIR, "docstore.pkl")
 
 def run_ingestion():
     """Runs the ingestion script as a subprocess."""
-    ingest_script_path = os.path.join(SCRIPT_DIR, "ingest_data.py")
+    ingest_script_path = os.path.join(SCRIPT_DIR, "ingest_datafinal.py")
     if not os.path.exists(ingest_script_path):
         st.error(f"Error: ingest_data.py not found at {ingest_script_path}")
         st.stop()

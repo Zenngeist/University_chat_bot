@@ -1,7 +1,7 @@
 import os
 import json
 import pickle
-from python-dotenv import load_dotenv
+from dotenv import load_dotenv
 from datetime import datetime
 
 # --- Loader Imports ---

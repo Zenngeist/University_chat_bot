@@ -4,12 +4,15 @@ import pickle
 from dotenv import load_dotenv
 from datetime import datetime
 
+# --- Loader Imports ---
 from langchain_community.document_loaders import PyMuPDFLoader, TextLoader, Docx2txtLoader
 
+# --- Retriever Imports ---
 from langchain.retrievers import ParentDocumentRetriever
 from langchain.storage import InMemoryStore
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 
+# --- Core LangChain Imports ---
 from langchain.docstore.document import Document
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import Chroma
@@ -23,6 +26,7 @@ if not GOOGLE_API_KEY:
 else:
     print("✓ API Key loaded successfully.")
 
+# --- Define Paths using relative paths for portability ---
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_PATH = os.path.join(SCRIPT_DIR, "data")
 VECTOR_STORE_PATH = os.path.join(SCRIPT_DIR, "vectorstore")
@@ -36,62 +40,67 @@ def get_document_metadata(filename):
     base_name, _ = os.path.splitext(filename)
     normalized_name = base_name.lower().replace('_', ' ').replace('-', ' ').replace('.', ' ')
     
-    topic = "general_university_info"
+    topic = "general_university_info" # Default topic
     if "time table" in normalized_name or "timetable" in normalized_name:
         topic = "student_timetable"
     elif "performance" in normalized_name or "indices" in normalized_name or "grade" in normalized_name:
         topic = "student_performance_indices"
     elif "attendance" in normalized_name:
         topic = "attendance_report"
+    elif "khaana" in normalized_name or "mess menu" in normalized_name:
+        topic = "mess_menu"
     elif "library" in normalized_name:
-        topic = "library"
+        topic = "library_info"
     elif "clubs" in normalized_name:
-        topic = "clubs"
+        topic = "student_clubs"
     elif "examination schedule" in normalized_name:
-        topic = "Mid_Term_exam_schedule_and_rules"
+        topic = "specific_exam_schedule"
     elif "calendar" in normalized_name:
         topic = "academic_calendar"
     elif "ordinance" in normalized_name or "conduct" in normalized_name or "hand book" in normalized_name:
         topic = "rules_and_regulations"
     elif "faculty" in normalized_name or "instructor" in normalized_name:
         topic = "faculty_info"
-    elif "fees" in normalized_name or "scholarship" in normalized_name:
+    elif "fee" in normalized_name or "scholarship" in normalized_name:
         topic = "admissions_and_fees"
     elif "syllabus" in normalized_name or "btcse batch" in normalized_name:
         topic = "course_syllabus"
         
     else:
-        is_qp = any(kw in normalized_name for kw in ["qp", "mid term", "end term", "mte", "back", "examination", "paper"])
-        topic_prefix = "exam_paper_" if is_qp else "course_material_"
-
+        subject_found = None
         if "advanced java" in normalized_name:
-            topic = topic_prefix + "advanced_java"
+            subject_found = "advanced_java"
         elif "r programming" in normalized_name:
-            topic = topic_prefix + "r_programming"
-        elif "product design" in normalized_name:
-            topic = topic_prefix + "product_design"
+            subject_found = "r_programming"
         elif "machine learning" in normalized_name:
-            topic = topic_prefix + "machine_learning"
+            subject_found = "machine_learning"
         elif "artificial intelligence" in normalized_name or "ai" in normalized_name:
-            topic = topic_prefix + "artificial_intelligence"
+            subject_found = "artificial_intelligence"
         elif "computer networks" in normalized_name:
-            topic = topic_prefix + "computer_networks"
+            subject_found = "computer_networks"
+        elif "product design" in normalized_name:
+            subject_found = "product_design"
         
         else:
             if any(kw in normalized_name for kw in ["csn302", "caf612", "csf206"]):
-                topic = topic_prefix + "advanced_java"
+                subject_found = "advanced_java"
             elif any(kw in normalized_name for kw in ["csn341", "csf341", "it345"]):
-                topic = topic_prefix + "r_programming"
+                subject_found = "r_programming"
             elif any(kw in normalized_name for kw in ["csn344", "csf344", "cs402", "cs401", "csf382", "mef453"]):
-                topic = topic_prefix + "machine_learning"
+                subject_found = "machine_learning"
             elif any(kw in normalized_name for kw in ["ca312", "csn304", "csf304", "ib343", "csf611"]):
-                topic = topic_prefix + "artificial_intelligence"
+                subject_found = "artificial_intelligence"
             elif any(kw in normalized_name for kw in ["csn303", "caf206", "cs303d", "csf303", "modcaf701", "cs348d", "csf351"]):
-                topic = topic_prefix + "computer_networks"
+                subject_found = "computer_networks"
             elif any(kw in normalized_name for kw in ["men446", "mef446"]):
-                topic = topic_prefix + "product_design"
-            elif is_qp:
-                 topic = "exam_paper_other"
+                subject_found = "product_design"
+        
+        if subject_found:
+            is_qp = any(kw in normalized_name for kw in ["qp", "mid term", "end term", "mte", "back", "examination", "paper"])
+            topic_prefix = "exam_paper_" if is_qp else "course_material_"
+            topic = topic_prefix + subject_found
+        elif any(kw in normalized_name for kw in ["qp", "mid term", "end term", "mte", "back", "examination", "paper"]):
+             topic = "exam_paper_other"
             
     return {"source": filename, "topic": topic, "ingestion_date": datetime.now().strftime("%Y-%m-%d")}
 
@@ -165,3 +174,4 @@ else:
     print(f"\n  ✓ Vector store persisted at: {VECTOR_STORE_PATH}")
 
 print("\n--- Ingestion Script Finished ---")
+

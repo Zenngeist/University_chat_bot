@@ -3,9 +3,9 @@ import pickle
 import streamlit as st
 from dotenv import load_dotenv
 from datetime import datetime
-import chromadb # Import chromadb
+import chromadb  # Import chromadb
 
-# --- NEW: Import the ingestion logic directly ---
+# --- Import the ingestion logic directly ---
 import ingestion
 
 # --- Imports for Advanced Retrievers ---
@@ -26,6 +26,15 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 VECTOR_STORE_PATH = os.path.join(SCRIPT_DIR, "vectorstore")
 DOC_STORE_FILE_PATH = os.path.join(SCRIPT_DIR, "docstore.pkl")
 
+# --- Function to get the API key securely ---
+def get_api_key():
+    load_dotenv()
+    # Try getting from environment for local dev, then from Streamlit secrets for deployment
+    key = os.getenv("GOOGLE_API_KEY") or st.secrets.get("GOOGLE_API_KEY")
+    if not key:
+        raise ValueError("Google API key not found. Please set it in .env file or Streamlit secrets.")
+    return key
+
 # --- Auto-setup Logic for Deployment ---
 # This checks if the knowledge base exists on the server. If not, it builds it once.
 if not os.path.exists(VECTOR_STORE_PATH) or not os.path.exists(DOC_STORE_FILE_PATH):
@@ -33,10 +42,12 @@ if not os.path.exists(VECTOR_STORE_PATH) or not os.path.exists(DOC_STORE_FILE_PA
     st.warning("This is a one-time setup and may take several minutes. Please be patient.")
     
     with st.spinner("Processing documents and creating vector store..."):
-        ingestion.build_knowledge_base()
+        api_key = get_api_key()
+        ingestion.build_knowledge_base(google_api_key=api_key)
     
-    st.success("Knowledge base built successfully! The app will now load.")
-    st.button("Start Chatbot")
+    st.success("Knowledge base built successfully! The app will now load. Please refresh the page.")
+    st.button("Refresh Page")
+    st.stop()  # Stop the script here to wait for the user to refresh
 
 @st.cache_resource
 def load_advanced_rag_chain():
@@ -44,12 +55,8 @@ def load_advanced_rag_chain():
     Loads all components for the RAG chain. This is cached for performance.
     """
     print("--- Running FINAL Multi-Query RAG Chain Setup ---")
-
-    load_dotenv()
-    # Securely load the API key for both local and server environments
-    GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY") or st.secrets.get("GOOGLE_API_KEY")
-    if not GOOGLE_API_KEY:
-        raise ValueError("Google API key not found. Please set it in .env or Streamlit secrets.")
+    
+    api_key = get_api_key()
 
     print(f"Loading parent document store from: {DOC_STORE_FILE_PATH}")
     try:
@@ -63,7 +70,7 @@ def load_advanced_rag_chain():
 
     embedding_model = GoogleGenerativeAIEmbeddings(
         model="models/text-embedding-004",
-        google_api_key=GOOGLE_API_KEY
+        google_api_key=api_key
     )
     
     # --- FIX: Explicitly connect to the persistent ChromaDB client for stability ---
@@ -71,7 +78,7 @@ def load_advanced_rag_chain():
     chroma_client = chromadb.PersistentClient(path=VECTOR_STORE_PATH)
     vector_store = Chroma(
         client=chroma_client,
-        collection_name="parent_document_retrieval", # Must match ingestion script
+        collection_name="parent_document_retrieval",  # Must match ingestion script
         embedding_function=embedding_model
     )
     
@@ -89,7 +96,7 @@ def load_advanced_rag_chain():
     llm = ChatGoogleGenerativeAI(
         model="models/gemini-2.5-flash", 
         temperature=0.3,
-        google_api_key=GOOGLE_API_KEY
+        google_api_key=api_key
     )
 
     multi_query_retriever = MultiQueryRetriever.from_llm(

@@ -79,7 +79,7 @@ def load_advanced_rag_chain():
     # --- IN-MEMORY CHROMA: compatible with ephemeral environments like Streamlit Cloud ---
     chroma_settings = Settings(
         chroma_db_impl="duckdb+parquet",
-        persist_directory=None  # <-- No on-disk persistence (in-memory / ephemeral)
+        anonymized_telemetry=False,   # optional but helpful
     )
 
     print("Initializing in-memory Chroma vector store...")

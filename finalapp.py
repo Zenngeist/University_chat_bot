@@ -4,6 +4,7 @@ import streamlit as st
 from dotenv import load_dotenv
 from datetime import datetime
 import chromadb  # Import chromadb
+from chromadb.config import Settings  # <-- new import
 
 # --- Import the ingestion logic directly ---
 import ingestion
@@ -30,21 +31,22 @@ DOC_STORE_FILE_PATH = os.path.join(SCRIPT_DIR, "docstore.pkl")
 def get_api_key():
     load_dotenv()
     # Try getting from environment for local dev, then from Streamlit secrets for deployment
-    key = os.getenv("GOOGLE_API_KEY") or st.secrets.get("GOOGLE_API_KEY")
+    key = os.getenv("GOOGLE_API_KEY") or (st.secrets.get("GOOGLE_API_KEY") if hasattr(st, "secrets") else None)
     if not key:
         raise ValueError("Google API key not found. Please set it in .env file or Streamlit secrets.")
     return key
 
 # --- Auto-setup Logic for Deployment ---
-# This checks if the knowledge base exists on the server. If not, it builds it once.
-if not os.path.exists(VECTOR_STORE_PATH) or not os.path.exists(DOC_STORE_FILE_PATH):
+# Use the presence of the docstore pickle as the single source of truth for deciding ingestion.
+# With in-memory Chroma we do not rely on a persisted vectorstore directory.
+if not os.path.exists(DOC_STORE_FILE_PATH):
     st.info("Knowledge base not found. Building it for the first time...")
     st.warning("This is a one-time setup and may take several minutes. Please be patient.")
-    
+
     with st.spinner("Processing documents and creating vector store..."):
         api_key = get_api_key()
         ingestion.build_knowledge_base(google_api_key=api_key)
-    
+
     st.success("Knowledge base built successfully! The app will now load. Please refresh the page.")
     st.button("Refresh Page")
     st.stop()  # Stop the script here to wait for the user to refresh
@@ -53,9 +55,10 @@ if not os.path.exists(VECTOR_STORE_PATH) or not os.path.exists(DOC_STORE_FILE_PA
 def load_advanced_rag_chain():
     """
     Loads all components for the RAG chain. This is cached for performance.
+    Uses IN-MEMORY Chroma (no on-disk persistence) so the app is compatible with Streamlit Cloud.
     """
     print("--- Running FINAL Multi-Query RAG Chain Setup ---")
-    
+
     api_key = get_api_key()
 
     print(f"Loading parent document store from: {DOC_STORE_FILE_PATH}")
@@ -72,16 +75,20 @@ def load_advanced_rag_chain():
         model="models/text-embedding-004",
         google_api_key=api_key
     )
-    
-    # --- FIX: Explicitly connect to the persistent ChromaDB client for stability ---
-    print(f"Loading vector store from: {VECTOR_STORE_PATH}")
-    chroma_client = chromadb.PersistentClient(path=VECTOR_STORE_PATH)
+
+    # --- IN-MEMORY CHROMA: compatible with ephemeral environments like Streamlit Cloud ---
+    chroma_settings = Settings(
+        chroma_db_impl="duckdb+parquet",
+        persist_directory=None  # <-- No on-disk persistence (in-memory / ephemeral)
+    )
+
+    print("Initializing in-memory Chroma vector store...")
     vector_store = Chroma(
-        client=chroma_client,
+        client_settings=chroma_settings,
         collection_name="parent_document_retrieval",  # Must match ingestion script
         embedding_function=embedding_model
     )
-    
+
     parent_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=300)
     child_splitter = RecursiveCharacterTextSplitter(chunk_size=400, chunk_overlap=50)
 
@@ -94,7 +101,7 @@ def load_advanced_rag_chain():
     print("  ✓ Base ParentDocumentRetriever reconstructed successfully.")
 
     llm = ChatGoogleGenerativeAI(
-        model="models/gemini-2.5-flash", 
+        model="models/gemini-2.5-flash",
         temperature=0.3,
         google_api_key=api_key
     )
@@ -129,7 +136,7 @@ def load_advanced_rag_chain():
     Helpful Answer:
     """
     QA_PROMPT = PromptTemplate(template=qa_prompt_template, input_variables=["context", "question"])
-    
+
     qa_chain = ConversationalRetrievalChain.from_llm(
         llm=llm,
         retriever=multi_query_retriever,
@@ -143,7 +150,7 @@ def load_advanced_rag_chain():
 # --- UI and Main App Logic ---
 def process_query(qa_chain, prompt):
     st.session_state.messages.append({"role": "user", "content": prompt})
-    
+
     with st.spinner("Thinking..."):
         try:
             response = qa_chain.invoke({
@@ -153,7 +160,7 @@ def process_query(qa_chain, prompt):
             answer = response["answer"]
 
             st.session_state.messages.append({"role": "assistant", "content": answer})
-            
+
             st.session_state.chat_history.append(HumanMessage(content=prompt))
             st.session_state.chat_history.append(AIMessage(content=answer))
         except Exception as e:
@@ -172,20 +179,20 @@ if "chat_history" not in st.session_state:
 
 if not st.session_state.messages:
     st.session_state.messages.append({"role": "assistant", "content": "Hey there, I'm here to help you with anything DIT University related. What's on your mind?"})
-    
+
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.write(message["content"])
 
 if len(st.session_state.messages) <= 1:
     today_name = datetime.now().strftime('%A')
-    
+
     st.write("Here are some things you can ask:")
     col1, col2, col3 = st.columns(3)
     with col1:
         if st.button("🗓️ When is Youthopia fest?"):
             process_query(qa_chain, "When is Youthopia fest?")
-            st.rerun() 
+            st.rerun()
     with col2:
         if st.button("✍️ What is the Mid-term schedule?"):
             process_query(qa_chain, "What is the Mid-term schedule?")
@@ -195,6 +202,7 @@ if len(st.session_state.messages) <= 1:
             process_query(qa_chain, f"What is my full schedule for {today_name}?")
             st.rerun()
 
+# Fixed: pass qa_chain into process_query from chat_input
 if prompt := st.chat_input("Ask me something about the university..."):
-    process_query(prompt)
+    process_query(qa_chain, prompt)
     st.rerun()

@@ -2,8 +2,8 @@ import os
 import json
 import pickle
 from datetime import datetime
-import chromadb  # Import chromadb
-from chromadb.config import Settings  # <-- new import
+import chromadb
+from chromadb.config import Settings
 
 # --- Loader Imports ---
 from langchain_community.document_loaders import PyMuPDFLoader, TextLoader, Docx2txtLoader
@@ -17,6 +17,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.docstore.document import Document
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import Chroma
+
 
 def get_document_metadata(filename):
     """
@@ -74,6 +75,7 @@ def get_document_metadata(filename):
              topic = "exam_paper_other"
     return {"source": filename, "topic": topic, "ingestion_date": datetime.now().strftime("%Y-%m-%d")}
 
+
 # --- MODIFIED: This is now a function that accepts the API key ---
 def build_knowledge_base(google_api_key):
     """Main function to build the knowledge base, called from the Streamlit app."""
@@ -114,14 +116,13 @@ def build_knowledge_base(google_api_key):
     embedding_model = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004", google_api_key=google_api_key)
     
     # --- IN-MEMORY CHROMA: compatible with ephemeral environments like Streamlit Cloud ---
+    # NOTE: avoid persist_directory=None because pydantic validation can fail in some chromadb versions.
     chroma_settings = Settings(
         chroma_db_impl="duckdb+parquet",
-        persist_directory=None  # <-- No on-disk persistence (in-memory / ephemeral)
+        anonymized_telemetry=False,
     )
-    vector_store = Chroma(client_settings=chroma_settings,
-                          collection_name="parent_document_retrieval",
-                          embedding_function=embedding_model)
 
+    vector_store = Chroma(client_settings=chroma_settings, collection_name="parent_document_retrieval", embedding_function=embedding_model)
     store = InMemoryStore()
     print("  > Stores initialized.")
     
@@ -144,6 +145,7 @@ def build_knowledge_base(google_api_key):
         print("  ✓ Parent document store saved successfully.")
     except Exception as e: print(f"!!! ERROR in Stage 4: {e}")
     print("\n--- Ingestion Process Finished ---")
+
 
 # This allows the script to be run standalone for local testing if needed
 if __name__ == "__main__":

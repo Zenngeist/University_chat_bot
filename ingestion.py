@@ -1,6 +1,7 @@
 import os
 import json
 import pickle
+from dotenv import load_dotenv
 from datetime import datetime
 
 # --- Loader Imports ---
@@ -18,7 +19,8 @@ from langchain_community.vectorstores import Chroma
 
 print("--- Starting Final Advanced Ingestion Script ---")
 
-GOOGLE_API_KEY = st.secrets["GOOGLE_API_KEY"]
+load_dotenv()
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 if not GOOGLE_API_KEY:
     raise ValueError("Google API key not found. Please set it in the .env file.")
 else:
@@ -52,53 +54,50 @@ def get_document_metadata(filename):
     elif "clubs" in normalized_name:
         topic = "student_clubs"
     elif "examination schedule" in normalized_name:
-        topic = "specific_exam_schedule"
+        topic = "Mid_Term_exam_schedule_and_rules"
     elif "calendar" in normalized_name:
         topic = "academic_calendar"
     elif "ordinance" in normalized_name or "conduct" in normalized_name or "hand book" in normalized_name:
         topic = "rules_and_regulations"
     elif "faculty" in normalized_name or "instructor" in normalized_name:
         topic = "faculty_info"
-    elif "fee" in normalized_name or "scholarship" in normalized_name:
+    elif "fees" in normalized_name or "scholarship" in normalized_name:
         topic = "admissions_and_fees"
     elif "syllabus" in normalized_name or "btcse batch" in normalized_name:
         topic = "course_syllabus"
         
     else:
-        subject_found = None
+        is_qp = any(kw in normalized_name for kw in ["qp", "mid term", "end term", "mte", "back", "examination", "paper"])
+        topic_prefix = "exam_paper_" if is_qp else "course_material_"
+
         if "advanced java" in normalized_name:
-            subject_found = "advanced_java"
+            topic = topic_prefix + "advanced_java"
         elif "r programming" in normalized_name:
-            subject_found = "r_programming"
-        elif "machine learning" in normalized_name:
-            subject_found = "machine_learning"
-        elif "artificial intelligence" in normalized_name or "ai" in normalized_name:
-            subject_found = "artificial_intelligence"
-        elif "computer networks" in normalized_name:
-            subject_found = "computer_networks"
+            topic = topic_prefix + "r_programming"
         elif "product design" in normalized_name:
-            subject_found = "product_design"
+            topic = topic_prefix + "product_design"
+        elif "machine learning" in normalized_name:
+            topic = topic_prefix + "machine_learning"
+        elif "artificial intelligence" in normalized_name or "ai" in normalized_name:
+            topic = topic_prefix + "artificial_intelligence"
+        elif "computer networks" in normalized_name:
+            topic = topic_prefix + "computer_networks"
         
         else:
             if any(kw in normalized_name for kw in ["csn302", "caf612", "csf206"]):
-                subject_found = "advanced_java"
+                topic = topic_prefix + "advanced_java"
             elif any(kw in normalized_name for kw in ["csn341", "csf341", "it345"]):
-                subject_found = "r_programming"
+                topic = topic_prefix + "r_programming"
             elif any(kw in normalized_name for kw in ["csn344", "csf344", "cs402", "cs401", "csf382", "mef453"]):
-                subject_found = "machine_learning"
+                topic = topic_prefix + "machine_learning"
             elif any(kw in normalized_name for kw in ["ca312", "csn304", "csf304", "ib343", "csf611"]):
-                subject_found = "artificial_intelligence"
+                topic = topic_prefix + "artificial_intelligence"
             elif any(kw in normalized_name for kw in ["csn303", "caf206", "cs303d", "csf303", "modcaf701", "cs348d", "csf351"]):
-                subject_found = "computer_networks"
+                topic = topic_prefix + "computer_networks"
             elif any(kw in normalized_name for kw in ["men446", "mef446"]):
-                subject_found = "product_design"
-        
-        if subject_found:
-            is_qp = any(kw in normalized_name for kw in ["qp", "mid term", "end term", "mte", "back", "examination", "paper"])
-            topic_prefix = "exam_paper_" if is_qp else "course_material_"
-            topic = topic_prefix + subject_found
-        elif any(kw in normalized_name for kw in ["qp", "mid term", "end term", "mte", "back", "examination", "paper"]):
-             topic = "exam_paper_other"
+                topic = topic_prefix + "product_design"
+            elif is_qp:
+                 topic = "exam_paper_other"
             
     return {"source": filename, "topic": topic, "ingestion_date": datetime.now().strftime("%Y-%m-%d")}
 
@@ -140,6 +139,7 @@ else:
     embedding_model = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004", google_api_key=GOOGLE_API_KEY)
     print("  > Embedding model initialized.")
     
+    # Corrected collection_name to match app.py
     vector_store = Chroma(collection_name="parent_document_retrieval", embedding_function=embedding_model, persist_directory=VECTOR_STORE_PATH)
     store = InMemoryStore()
     print("  > Stores initialized.")
@@ -150,6 +150,7 @@ else:
     retriever = ParentDocumentRetriever(vectorstore=vector_store, docstore=store, child_splitter=child_splitter, parent_splitter=parent_splitter)
     print("  > ParentDocumentRetriever is ready.")
     
+    # --- BATCH PROCESSING FIX ---
     print("\n--- Stage 3: Adding Documents in Batches (This will take time) ---")
     batch_size = 100
     total_docs = len(all_documents)

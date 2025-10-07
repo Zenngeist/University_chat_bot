@@ -2,7 +2,8 @@ import os
 import json
 import pickle
 from datetime import datetime
-import chromadb # Import chromadb
+import chromadb  # Import chromadb
+from chromadb.config import Settings  # <-- new import
 
 # --- Loader Imports ---
 from langchain_community.document_loaders import PyMuPDFLoader, TextLoader, Docx2txtLoader
@@ -112,9 +113,15 @@ def build_knowledge_base(google_api_key):
     print("\n--- Stage 2: Setting up Advanced Retriever ---")
     embedding_model = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004", google_api_key=google_api_key)
     
-    # Use a persistent client for stability in cloud environments
-    chroma_client = chromadb.PersistentClient(path=VECTOR_STORE_PATH)
-    vector_store = Chroma(client=chroma_client, collection_name="parent_document_retrieval", embedding_function=embedding_model)
+    # --- IN-MEMORY CHROMA: compatible with ephemeral environments like Streamlit Cloud ---
+    chroma_settings = Settings(
+        chroma_db_impl="duckdb+parquet",
+        persist_directory=None  # <-- No on-disk persistence (in-memory / ephemeral)
+    )
+    vector_store = Chroma(client_settings=chroma_settings,
+                          collection_name="parent_document_retrieval",
+                          embedding_function=embedding_model)
+
     store = InMemoryStore()
     print("  > Stores initialized.")
     

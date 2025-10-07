@@ -1,5 +1,5 @@
+# ingestion.py
 import os
-import json
 import pickle
 from datetime import datetime
 import chromadb
@@ -25,9 +25,8 @@ def get_document_metadata(filename):
     """
     base_name, _ = os.path.splitext(filename)
     normalized_name = base_name.lower().replace('_', ' ').replace('-', ' ').replace('.', ' ')
-    
-    topic = "general_university_info" # Default topic
-    # --- (Your detailed classification logic remains here) ---
+
+    topic = "general_university_info"  # Default topic
     if "time table" in normalized_name or "timetable" in normalized_name:
         topic = "student_timetable"
     elif "performance" in normalized_name or "indices" in normalized_name or "grade" in normalized_name:
@@ -54,29 +53,42 @@ def get_document_metadata(filename):
         topic = "course_syllabus"
     else:
         subject_found = None
-        if "advanced java" in normalized_name: subject_found = "advanced_java"
-        elif "r programming" in normalized_name: subject_found = "r_programming"
-        elif "machine learning" in normalized_name: subject_found = "machine_learning"
-        elif "artificial intelligence" in normalized_name or "ai" in normalized_name: subject_found = "artificial_intelligence"
-        elif "computer networks" in normalized_name: subject_found = "computer_networks"
-        elif "product design" in normalized_name: subject_found = "product_design"
+        if "advanced java" in normalized_name:
+            subject_found = "advanced_java"
+        elif "r programming" in normalized_name:
+            subject_found = "r_programming"
+        elif "machine learning" in normalized_name:
+            subject_found = "machine_learning"
+        elif "artificial intelligence" in normalized_name or "ai" in normalized_name:
+            subject_found = "artificial_intelligence"
+        elif "computer networks" in normalized_name:
+            subject_found = "computer_networks"
+        elif "product design" in normalized_name:
+            subject_found = "product_design"
         else:
-            if any(kw in normalized_name for kw in ["csn302", "caf612", "csf206"]): subject_found = "advanced_java"
-            elif any(kw in normalized_name for kw in ["csn341", "csf341", "it345"]): subject_found = "r_programming"
-            elif any(kw in normalized_name for kw in ["csn344", "csf344", "cs402", "cs401", "csf382", "mef453"]): subject_found = "machine_learning"
-            elif any(kw in normalized_name for kw in ["ca312", "csn304", "csf304", "ib343", "csf611"]): subject_found = "artificial_intelligence"
-            elif any(kw in normalized_name for kw in ["csn303", "caf206", "cs303d", "csf303", "modcaf701", "cs348d", "csf351"]): subject_found = "computer_networks"
-            elif any(kw in normalized_name for kw in ["men446", "mef446"]): subject_found = "product_design"
+            if any(kw in normalized_name for kw in ["csn302", "caf612", "csf206"]):
+                subject_found = "advanced_java"
+            elif any(kw in normalized_name for kw in ["csn341", "csf341", "it345"]):
+                subject_found = "r_programming"
+            elif any(kw in normalized_name for kw in ["csn344", "csf344", "cs402", "cs401", "csf382", "mef453"]):
+                subject_found = "machine_learning"
+            elif any(kw in normalized_name for kw in ["ca312", "csn304", "csf304", "ib343", "csf611"]):
+                subject_found = "artificial_intelligence"
+            elif any(kw in normalized_name for kw in ["csn303", "caf206", "cs303d", "csf303", "modcaf701", "cs348d", "csf351"]):
+                subject_found = "computer_networks"
+            elif any(kw in normalized_name for kw in ["men446", "mef446"]):
+                subject_found = "product_design"
+
         if subject_found:
             is_qp = any(kw in normalized_name for kw in ["qp", "mid term", "end term", "mte", "back", "examination", "paper"])
             topic_prefix = "exam_paper_" if is_qp else "course_material_"
             topic = topic_prefix + subject_found
         elif any(kw in normalized_name for kw in ["qp", "mid term", "end term", "mte", "back", "examination", "paper"]):
-             topic = "exam_paper_other"
+            topic = "exam_paper_other"
+
     return {"source": filename, "topic": topic, "ingestion_date": datetime.now().strftime("%Y-%m-%d")}
 
 
-# --- MODIFIED: This is now a function that accepts the API key ---
 def build_knowledge_base(google_api_key):
     """Main function to build the knowledge base, called from the Streamlit app."""
     print("--- Starting Final Advanced Ingestion Process ---")
@@ -87,50 +99,88 @@ def build_knowledge_base(google_api_key):
 
     SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
     DATA_PATH = os.path.join(SCRIPT_DIR, "data")
-    VECTOR_STORE_PATH = os.path.join(SCRIPT_DIR, "vectorstore")
     DOC_STORE_FILE_PATH = os.path.join(SCRIPT_DIR, "docstore.pkl")
     all_documents = []
 
     print(f"\n--- Stage 1: Loading & Enriching Documents from '{DATA_PATH}' ---")
     try:
-        if not os.path.isdir(DATA_PATH): raise FileNotFoundError(f"The directory '{DATA_PATH}' was not found.")
+        if not os.path.isdir(DATA_PATH):
+            raise FileNotFoundError(f"The directory '{DATA_PATH}' was not found.")
         for filename in os.listdir(DATA_PATH):
             file_path = os.path.join(DATA_PATH, filename)
             metadata = get_document_metadata(filename)
             print(f"  > Found '{filename}' | Topic: {metadata['topic']}")
             try:
-                if filename.endswith('.pdf'): loader = PyMuPDFLoader(file_path)
-                elif filename.endswith('.docx'): loader = Docx2txtLoader(file_path)
-                elif filename.endswith('.txt'): loader = TextLoader(file_path, encoding='utf-8')
-                else: print(f"    > Skipping unsupported file: {filename}"); continue
-                docs = loader.load()
-                for doc in docs: doc.metadata.update(metadata)
-                all_documents.extend(docs)
-            except Exception as e: print(f"    !!! WARNING: Failed to load {filename}. Error: {e}")
-    except Exception as e: print(f"!!! ERROR in Stage 1: {e}")
+                if filename.endswith('.pdf'):
+                    loader = PyMuPDFLoader(file_path)
+                elif filename.endswith('.docx'):
+                    loader = Docx2txtLoader(file_path)
+                elif filename.endswith('.txt'):
+                    loader = TextLoader(file_path, encoding='utf-8')
+                else:
+                    print(f"    > Skipping unsupported file: {filename}")
+                    continue
 
-    if not all_documents: print("!!! CRITICAL ERROR: No documents were loaded."); return
-    else: print(f"\n--- CHECKPOINT: Total documents loaded: {len(all_documents)} ---")
+                docs = loader.load()
+                for doc in docs:
+                    doc.metadata.update(metadata)
+                all_documents.extend(docs)
+            except Exception as e:
+                print(f"    !!! WARNING: Failed to load {filename}. Error: {e}")
+    except Exception as e:
+        print(f"!!! ERROR in Stage 1: {e}")
+
+    if not all_documents:
+        print("!!! CRITICAL ERROR: No documents were loaded.")
+        return
+    else:
+        print(f"\n--- CHECKPOINT: Total documents loaded: {len(all_documents)} ---")
 
     print("\n--- Stage 2: Setting up Advanced Retriever ---")
     embedding_model = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004", google_api_key=google_api_key)
-    
+
     # --- IN-MEMORY CHROMA: compatible with ephemeral environments like Streamlit Cloud ---
-    # NOTE: avoid persist_directory=None because pydantic validation can fail in some chromadb versions.
     chroma_settings = Settings(
         chroma_db_impl="duckdb+parquet",
         anonymized_telemetry=False,
     )
 
-    vector_store = Chroma(client_settings=chroma_settings, collection_name="parent_document_retrieval", embedding_function=embedding_model)
+    # Initialize chromadb client with fallbacks (works across chromadb versions)
+    print("Initializing in-memory Chroma client for ingestion...")
+    chroma_client = None
+    try:
+        chroma_client = chromadb.Client(settings=chroma_settings)
+    except Exception as e1:
+        print(f"Warning: chromadb.Client(settings=Settings(...)) failed: {e1}. Trying fallback with plain dict...")
+        try:
+            chroma_client = chromadb.Client(settings={"chroma_db_impl": "duckdb+parquet", "anonymized_telemetry": False})
+        except Exception as e2:
+            raise RuntimeError(
+                "Failed to initialize chromadb client during ingestion. "
+                f"Primary error: {e1}; fallback error: {e2}. "
+                "Consider chromadb version compatibility or use a remote chroma server."
+            )
+
+    # Create LangChain Chroma vector store using the created client
+    vector_store = Chroma(
+        client=chroma_client,
+        collection_name="parent_document_retrieval",
+        embedding_function=embedding_model
+    )
+
     store = InMemoryStore()
     print("  > Stores initialized.")
-    
+
     parent_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=300)
     child_splitter = RecursiveCharacterTextSplitter(chunk_size=400, chunk_overlap=50)
-    retriever = ParentDocumentRetriever(vectorstore=vector_store, docstore=store, child_splitter=child_splitter, parent_splitter=parent_splitter)
+    retriever = ParentDocumentRetriever(
+        vectorstore=vector_store,
+        docstore=store,
+        child_splitter=child_splitter,
+        parent_splitter=parent_splitter
+    )
     print("  > ParentDocumentRetriever is ready.")
-    
+
     print("\n--- Stage 3: Adding Documents in Batches ---")
     batch_size = 100
     for i in range(0, len(all_documents), batch_size):
@@ -138,12 +188,14 @@ def build_knowledge_base(google_api_key):
         print(f"  > Processing batch {i//batch_size + 1}/{(len(all_documents) + batch_size - 1)//batch_size}...")
         retriever.add_documents(batch, ids=None)
     print("  > Data ingestion complete.")
-    
+
     print(f"\n--- Stage 4: Saving parent document store to {DOC_STORE_FILE_PATH} ---")
     try:
-        with open(DOC_STORE_FILE_PATH, "wb") as f: pickle.dump(store.store, f)
+        with open(DOC_STORE_FILE_PATH, "wb") as f:
+            pickle.dump(store.store, f)
         print("  ✓ Parent document store saved successfully.")
-    except Exception as e: print(f"!!! ERROR in Stage 4: {e}")
+    except Exception as e:
+        print(f"!!! ERROR in Stage 4: {e}")
     print("\n--- Ingestion Process Finished ---")
 
 

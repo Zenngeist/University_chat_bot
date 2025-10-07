@@ -51,7 +51,6 @@ if not os.path.exists(DOC_STORE_FILE_PATH):
     st.button("Refresh Page")
     st.stop()  # Stop the script here to wait for the user to refresh
 
-@st.cache_resource
 def load_advanced_rag_chain():
     """
     Loads all components for the RAG chain. This is cached for performance.

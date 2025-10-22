@@ -17,7 +17,7 @@ def get_document_metadata(filename):
     base_name, _ = os.path.splitext(filename)
     normalized_name = base_name.lower().replace('_', ' ').replace('-', ' ').replace('.', ' ')
 
-    topic = "general_university_info"  # Default topic
+    topic = "general_university_info" 
     if "time table" in normalized_name or "timetable" in normalized_name:
         topic = "student_timetable"
     elif "performance" in normalized_name or "indices" in normalized_name or "grade" in normalized_name:
@@ -148,7 +148,6 @@ def build_knowledge_base(google_api_key):
                 "Consider chromadb version compatibility or use a remote chroma server."
             )
 
-    # Create LangChain Chroma vector store using the created client
     vector_store = Chroma(
         client=chroma_client,
         collection_name="parent_document_retrieval",

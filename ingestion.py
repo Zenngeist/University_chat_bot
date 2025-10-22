@@ -1,24 +1,15 @@
-# ingestion.py
 import os
 import pickle
 from datetime import datetime
 import chromadb
 from chromadb.config import Settings
-
-# --- Loader Imports ---
 from langchain_community.document_loaders import PyMuPDFLoader, TextLoader, Docx2txtLoader
-
-# --- Retriever Imports ---
 from langchain.retrievers import ParentDocumentRetriever
 from langchain.storage import InMemoryStore
 from langchain.text_splitter import RecursiveCharacterTextSplitter
-
-# --- Core LangChain Imports ---
 from langchain.docstore.document import Document
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import Chroma
-
-
 def get_document_metadata(filename):
     """
     Assigns highly granular topics to each document for precise retrieval.
@@ -138,14 +129,10 @@ def build_knowledge_base(google_api_key):
 
     print("\n--- Stage 2: Setting up Advanced Retriever ---")
     embedding_model = GoogleGenerativeAIEmbeddings(model="models/text-embedding-004", google_api_key=google_api_key)
-
-    # --- IN-MEMORY CHROMA: compatible with ephemeral environments like Streamlit Cloud ---
     chroma_settings = Settings(
         chroma_db_impl="duckdb+parquet",
         anonymized_telemetry=False,
     )
-
-    # Initialize chromadb client with fallbacks (works across chromadb versions)
     print("Initializing in-memory Chroma client for ingestion...")
     chroma_client = None
     try:
@@ -197,9 +184,6 @@ def build_knowledge_base(google_api_key):
     except Exception as e:
         print(f"!!! ERROR in Stage 4: {e}")
     print("\n--- Ingestion Process Finished ---")
-
-
-# This allows the script to be run standalone for local testing if needed
 if __name__ == "__main__":
     from dotenv import load_dotenv
     load_dotenv()
